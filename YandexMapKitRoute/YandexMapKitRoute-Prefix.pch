@@ -1,0 +1,7 @@
+//
+// Prefix header for all source files of the 'YandexMapKitRoute' target in the 'YandexMapKitRoute' project
+//
+
+#ifdef __OBJC__
+    #import <Foundation/Foundation.h>
+#endif
