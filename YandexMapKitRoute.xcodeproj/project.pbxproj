@@ -7,15 +7,21 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4C2973151625B9C7007E37CA /* YandexRouteOverlay.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C2973141625B9C7007E37CA /* YandexRouteOverlay.m */; };
+		4C2F1B3A1624102000F8ADA4 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C4C4F101622FF19004CEBFC /* UIKit.framework */; };
 		4C3D44C71622F06D00321BA3 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C3D44C61622F06D00321BA3 /* Foundation.framework */; };
 		4C3D44CC1622F06D00321BA3 /* YandexMapKitRoute.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 4C3D44CB1622F06D00321BA3 /* YandexMapKitRoute.h */; };
 		4C3D44CE1622F06D00321BA3 /* YandexMapKitRoute.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C3D44CD1622F06D00321BA3 /* YandexMapKitRoute.m */; };
 		4C3D44D61622F06D00321BA3 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C3D44D51622F06D00321BA3 /* SenTestingKit.framework */; };
-		4C3D44D81622F06D00321BA3 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C3D44D71622F06D00321BA3 /* UIKit.framework */; };
 		4C3D44D91622F06D00321BA3 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C3D44C61622F06D00321BA3 /* Foundation.framework */; };
 		4C3D44DC1622F06D00321BA3 /* libYandexMapKitRoute.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C3D44C31622F06D00321BA3 /* libYandexMapKitRoute.a */; };
 		4C3D44E21622F06D00321BA3 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4C3D44E01622F06D00321BA3 /* InfoPlist.strings */; };
 		4C3D44E51622F06D00321BA3 /* YandexMapKitRouteTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C3D44E41622F06D00321BA3 /* YandexMapKitRouteTests.m */; };
+		4C4C4F111622FF19004CEBFC /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C4C4F101622FF19004CEBFC /* UIKit.framework */; };
+		4C5FE385162580F500028E1B /* YandexMapKitRouteDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C5FE384162580F400028E1B /* YandexMapKitRouteDelegate.m */; };
+		4C5FE3891625826B00028E1B /* YandexMapKitRouteAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C5FE3881625826B00028E1B /* YandexMapKitRouteAnnotation.m */; };
+		4C5FE38C1625842800028E1B /* YandexMapKitRouteAnnotationView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C5FE38B1625842700028E1B /* YandexMapKitRouteAnnotationView.m */; };
+		4C5FE38D162587C800028E1B /* YandexBase64.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C74249C162308BA00AAF6C7 /* YandexBase64.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,18 +48,55 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		4C2973131625B9C6007E37CA /* YandexRouteOverlay.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YandexRouteOverlay.h; sourceTree = "<group>"; };
+		4C2973141625B9C7007E37CA /* YandexRouteOverlay.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YandexRouteOverlay.m; sourceTree = "<group>"; };
+		4C2973171625BA25007E37CA /* YMMapOverlayView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YMMapOverlayView.h; sourceTree = "<group>"; };
 		4C3D44C31622F06D00321BA3 /* libYandexMapKitRoute.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libYandexMapKitRoute.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		4C3D44C61622F06D00321BA3 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
-		4C3D44CA1622F06D00321BA3 /* YandexMapKitRoute-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "YandexMapKitRoute-Prefix.pch"; sourceTree = "<group>"; };
-		4C3D44CB1622F06D00321BA3 /* YandexMapKitRoute.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YandexMapKitRoute.h; sourceTree = "<group>"; };
-		4C3D44CD1622F06D00321BA3 /* YandexMapKitRoute.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YandexMapKitRoute.m; sourceTree = "<group>"; };
+		4C3D44CA1622F06D00321BA3 /* YandexMapKitRoute-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "YandexMapKitRoute-Prefix.pch"; path = "YandexMapKitRoute/YandexMapKitRoute-Prefix.pch"; sourceTree = SOURCE_ROOT; };
+		4C3D44CB1622F06D00321BA3 /* YandexMapKitRoute.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = YandexMapKitRoute.h; path = YandexMapKitRoute/YandexMapKitRoute.h; sourceTree = SOURCE_ROOT; };
+		4C3D44CD1622F06D00321BA3 /* YandexMapKitRoute.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = YandexMapKitRoute.m; path = YandexMapKitRoute/YandexMapKitRoute.m; sourceTree = SOURCE_ROOT; };
 		4C3D44D41622F06D00321BA3 /* YandexMapKitRouteTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = YandexMapKitRouteTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4C3D44D51622F06D00321BA3 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
-		4C3D44D71622F06D00321BA3 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
 		4C3D44DF1622F06D00321BA3 /* YandexMapKitRouteTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "YandexMapKitRouteTests-Info.plist"; sourceTree = "<group>"; };
 		4C3D44E11622F06D00321BA3 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		4C3D44E31622F06D00321BA3 /* YandexMapKitRouteTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YandexMapKitRouteTests.h; sourceTree = "<group>"; };
 		4C3D44E41622F06D00321BA3 /* YandexMapKitRouteTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YandexMapKitRouteTests.m; sourceTree = "<group>"; };
+		4C4C4EF51622FE4A004CEBFC /* NSValue+YMKMapCoordinate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSValue+YMKMapCoordinate.h"; path = "../../YandexMapKit/Headers/NSValue+YMKMapCoordinate.h"; sourceTree = "<group>"; };
+		4C4C4EF61622FE4A004CEBFC /* YandexMapKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = YandexMapKit.h; path = ../../YandexMapKit/Headers/YandexMapKit.h; sourceTree = "<group>"; };
+		4C4C4EF71622FE4A004CEBFC /* YMKAnnotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = YMKAnnotation.h; path = ../../YandexMapKit/Headers/YMKAnnotation.h; sourceTree = "<group>"; };
+		4C4C4EF81622FE4A004CEBFC /* YMKAnnotationImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = YMKAnnotationImage.h; path = ../../YandexMapKit/Headers/YMKAnnotationImage.h; sourceTree = "<group>"; };
+		4C4C4EF91622FE4A004CEBFC /* YMKAnnotationView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = YMKAnnotationView.h; path = ../../YandexMapKit/Headers/YMKAnnotationView.h; sourceTree = "<group>"; };
+		4C4C4EFA1622FE4A004CEBFC /* YMKCalloutContentView-Protocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "YMKCalloutContentView-Protocol.h"; path = "../../YandexMapKit/Headers/YMKCalloutContentView-Protocol.h"; sourceTree = "<group>"; };
+		4C4C4EFB1622FE4A004CEBFC /* YMKCalloutView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = YMKCalloutView.h; path = ../../YandexMapKit/Headers/YMKCalloutView.h; sourceTree = "<group>"; };
+		4C4C4EFC1622FE4A004CEBFC /* YMKConfiguration.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = YMKConfiguration.h; path = ../../YandexMapKit/Headers/YMKConfiguration.h; sourceTree = "<group>"; };
+		4C4C4EFD1622FE4A004CEBFC /* YMKConsoleLogging.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = YMKConsoleLogging.h; path = ../../YandexMapKit/Headers/YMKConsoleLogging.h; sourceTree = "<group>"; };
+		4C4C4EFE1622FE4A004CEBFC /* YMKDraggableAnnotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = YMKDraggableAnnotation.h; path = ../../YandexMapKit/Headers/YMKDraggableAnnotation.h; sourceTree = "<group>"; };
+		4C4C4EFF1622FE4A004CEBFC /* YMKDraggablePinAnnotationView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = YMKDraggablePinAnnotationView.h; path = ../../YandexMapKit/Headers/YMKDraggablePinAnnotationView.h; sourceTree = "<group>"; };
+		4C4C4F001622FE4A004CEBFC /* YMKDraggablePinAnnotationViewDelegate+Protocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "YMKDraggablePinAnnotationViewDelegate+Protocol.h"; path = "../../YandexMapKit/Headers/YMKDraggablePinAnnotationViewDelegate+Protocol.h"; sourceTree = "<group>"; };
+		4C4C4F011622FE4A004CEBFC /* YMKGeoObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = YMKGeoObject.h; path = ../../YandexMapKit/Headers/YMKGeoObject.h; sourceTree = "<group>"; };
+		4C4C4F021622FE4A004CEBFC /* YMKHostsConfiguration.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = YMKHostsConfiguration.h; path = ../../YandexMapKit/Headers/YMKHostsConfiguration.h; sourceTree = "<group>"; };
+		4C4C4F031622FE4A004CEBFC /* YMKLocationFetcher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = YMKLocationFetcher.h; path = ../../YandexMapKit/Headers/YMKLocationFetcher.h; sourceTree = "<group>"; };
+		4C4C4F041622FE4A004CEBFC /* YMKMapImageBuilder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = YMKMapImageBuilder.h; path = ../../YandexMapKit/Headers/YMKMapImageBuilder.h; sourceTree = "<group>"; };
+		4C4C4F051622FE4A004CEBFC /* YMKMapLayerInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = YMKMapLayerInfo.h; path = ../../YandexMapKit/Headers/YMKMapLayerInfo.h; sourceTree = "<group>"; };
+		4C4C4F061622FE4A004CEBFC /* YMKMapLayersConfiguration.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = YMKMapLayersConfiguration.h; path = ../../YandexMapKit/Headers/YMKMapLayersConfiguration.h; sourceTree = "<group>"; };
+		4C4C4F071622FE4A004CEBFC /* YMKMapStructs.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = YMKMapStructs.h; path = ../../YandexMapKit/Headers/YMKMapStructs.h; sourceTree = "<group>"; };
+		4C4C4F081622FE4A004CEBFC /* YMKMapView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = YMKMapView.h; path = ../../YandexMapKit/Headers/YMKMapView.h; sourceTree = "<group>"; };
+		4C4C4F091622FE4A004CEBFC /* YMKMapViewDelegate+Protocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "YMKMapViewDelegate+Protocol.h"; path = "../../YandexMapKit/Headers/YMKMapViewDelegate+Protocol.h"; sourceTree = "<group>"; };
+		4C4C4F0A1622FE4A004CEBFC /* YMKPinAnnotationView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = YMKPinAnnotationView.h; path = ../../YandexMapKit/Headers/YMKPinAnnotationView.h; sourceTree = "<group>"; };
+		4C4C4F0B1622FE4A004CEBFC /* YMKRuler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = YMKRuler.h; path = ../../YandexMapKit/Headers/YMKRuler.h; sourceTree = "<group>"; };
+		4C4C4F0C1622FE4A004CEBFC /* YMKTrafficInformer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = YMKTrafficInformer.h; path = ../../YandexMapKit/Headers/YMKTrafficInformer.h; sourceTree = "<group>"; };
+		4C4C4F0D1622FE4A004CEBFC /* YMKUserLocation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = YMKUserLocation.h; path = ../../YandexMapKit/Headers/YMKUserLocation.h; sourceTree = "<group>"; };
+		4C4C4F0E1622FE4A004CEBFC /* YMKVersion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = YMKVersion.h; path = ../../YandexMapKit/Headers/YMKVersion.h; sourceTree = "<group>"; };
+		4C4C4F101622FF19004CEBFC /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		4C5FE383162580F400028E1B /* YandexMapKitRouteDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YandexMapKitRouteDelegate.h; sourceTree = "<group>"; };
+		4C5FE384162580F400028E1B /* YandexMapKitRouteDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YandexMapKitRouteDelegate.m; sourceTree = "<group>"; };
+		4C5FE3871625826B00028E1B /* YandexMapKitRouteAnnotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YandexMapKitRouteAnnotation.h; sourceTree = "<group>"; };
+		4C5FE3881625826B00028E1B /* YandexMapKitRouteAnnotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YandexMapKitRouteAnnotation.m; sourceTree = "<group>"; };
+		4C5FE38A1625842700028E1B /* YandexMapKitRouteAnnotationView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YandexMapKitRouteAnnotationView.h; sourceTree = "<group>"; };
+		4C5FE38B1625842700028E1B /* YandexMapKitRouteAnnotationView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YandexMapKitRouteAnnotationView.m; sourceTree = "<group>"; };
+		4C74249C162308BA00AAF6C7 /* YandexBase64.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = YandexBase64.m; path = YandexMapKitRoute/YandexBase64.m; sourceTree = SOURCE_ROOT; };
+		4C74249D162308BA00AAF6C7 /* YandexBase64.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = YandexBase64.h; path = YandexMapKitRoute/YandexBase64.h; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +105,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4C3D44C71622F06D00321BA3 /* Foundation.framework in Frameworks */,
+				4C4C4F111622FF19004CEBFC /* UIKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -70,9 +114,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				4C3D44D61622F06D00321BA3 /* SenTestingKit.framework in Frameworks */,
-				4C3D44D81622F06D00321BA3 /* UIKit.framework in Frameworks */,
 				4C3D44D91622F06D00321BA3 /* Foundation.framework in Frameworks */,
 				4C3D44DC1622F06D00321BA3 /* libYandexMapKitRoute.a in Frameworks */,
+				4C2F1B3A1624102000F8ADA4 /* UIKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -82,6 +126,7 @@
 		4C3D44B81622F06D00321BA3 = {
 			isa = PBXGroup;
 			children = (
+				4C4C4ECD1622F24E004CEBFC /* YandexMapKit */,
 				4C3D44C81622F06D00321BA3 /* YandexMapKitRoute */,
 				4C3D44DD1622F06D00321BA3 /* YandexMapKitRouteTests */,
 				4C3D44C51622F06D00321BA3 /* Frameworks */,
@@ -101,9 +146,9 @@
 		4C3D44C51622F06D00321BA3 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				4C4C4F101622FF19004CEBFC /* UIKit.framework */,
 				4C3D44C61622F06D00321BA3 /* Foundation.framework */,
 				4C3D44D51622F06D00321BA3 /* SenTestingKit.framework */,
-				4C3D44D71622F06D00321BA3 /* UIKit.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -111,9 +156,20 @@
 		4C3D44C81622F06D00321BA3 /* YandexMapKitRoute */ = {
 			isa = PBXGroup;
 			children = (
+				4C74249C162308BA00AAF6C7 /* YandexBase64.m */,
+				4C74249D162308BA00AAF6C7 /* YandexBase64.h */,
 				4C3D44CB1622F06D00321BA3 /* YandexMapKitRoute.h */,
 				4C3D44CD1622F06D00321BA3 /* YandexMapKitRoute.m */,
 				4C3D44C91622F06D00321BA3 /* Supporting Files */,
+				4C5FE383162580F400028E1B /* YandexMapKitRouteDelegate.h */,
+				4C5FE384162580F400028E1B /* YandexMapKitRouteDelegate.m */,
+				4C5FE3871625826B00028E1B /* YandexMapKitRouteAnnotation.h */,
+				4C5FE3881625826B00028E1B /* YandexMapKitRouteAnnotation.m */,
+				4C5FE38A1625842700028E1B /* YandexMapKitRouteAnnotationView.h */,
+				4C5FE38B1625842700028E1B /* YandexMapKitRouteAnnotationView.m */,
+				4C2973131625B9C6007E37CA /* YandexRouteOverlay.h */,
+				4C2973171625BA25007E37CA /* YMMapOverlayView.h */,
+				4C2973141625B9C7007E37CA /* YandexRouteOverlay.m */,
 			);
 			path = YandexMapKitRoute;
 			sourceTree = "<group>";
@@ -143,6 +199,47 @@
 				4C3D44E01622F06D00321BA3 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		4C4C4ECD1622F24E004CEBFC /* YandexMapKit */ = {
+			isa = PBXGroup;
+			children = (
+				4C4C4EF41622FE3B004CEBFC /* Headers */,
+			);
+			name = YandexMapKit;
+			sourceTree = "<group>";
+		};
+		4C4C4EF41622FE3B004CEBFC /* Headers */ = {
+			isa = PBXGroup;
+			children = (
+				4C4C4EF51622FE4A004CEBFC /* NSValue+YMKMapCoordinate.h */,
+				4C4C4EF61622FE4A004CEBFC /* YandexMapKit.h */,
+				4C4C4EF71622FE4A004CEBFC /* YMKAnnotation.h */,
+				4C4C4EF81622FE4A004CEBFC /* YMKAnnotationImage.h */,
+				4C4C4EF91622FE4A004CEBFC /* YMKAnnotationView.h */,
+				4C4C4EFA1622FE4A004CEBFC /* YMKCalloutContentView-Protocol.h */,
+				4C4C4EFB1622FE4A004CEBFC /* YMKCalloutView.h */,
+				4C4C4EFC1622FE4A004CEBFC /* YMKConfiguration.h */,
+				4C4C4EFD1622FE4A004CEBFC /* YMKConsoleLogging.h */,
+				4C4C4EFE1622FE4A004CEBFC /* YMKDraggableAnnotation.h */,
+				4C4C4EFF1622FE4A004CEBFC /* YMKDraggablePinAnnotationView.h */,
+				4C4C4F001622FE4A004CEBFC /* YMKDraggablePinAnnotationViewDelegate+Protocol.h */,
+				4C4C4F011622FE4A004CEBFC /* YMKGeoObject.h */,
+				4C4C4F021622FE4A004CEBFC /* YMKHostsConfiguration.h */,
+				4C4C4F031622FE4A004CEBFC /* YMKLocationFetcher.h */,
+				4C4C4F041622FE4A004CEBFC /* YMKMapImageBuilder.h */,
+				4C4C4F051622FE4A004CEBFC /* YMKMapLayerInfo.h */,
+				4C4C4F061622FE4A004CEBFC /* YMKMapLayersConfiguration.h */,
+				4C4C4F071622FE4A004CEBFC /* YMKMapStructs.h */,
+				4C4C4F081622FE4A004CEBFC /* YMKMapView.h */,
+				4C4C4F091622FE4A004CEBFC /* YMKMapViewDelegate+Protocol.h */,
+				4C4C4F0A1622FE4A004CEBFC /* YMKPinAnnotationView.h */,
+				4C4C4F0B1622FE4A004CEBFC /* YMKRuler.h */,
+				4C4C4F0C1622FE4A004CEBFC /* YMKTrafficInformer.h */,
+				4C4C4F0D1622FE4A004CEBFC /* YMKUserLocation.h */,
+				4C4C4F0E1622FE4A004CEBFC /* YMKVersion.h */,
+			);
+			name = Headers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -244,6 +341,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				4C3D44CE1622F06D00321BA3 /* YandexMapKitRoute.m in Sources */,
+				4C5FE385162580F500028E1B /* YandexMapKitRouteDelegate.m in Sources */,
+				4C5FE3891625826B00028E1B /* YandexMapKitRouteAnnotation.m in Sources */,
+				4C5FE38C1625842800028E1B /* YandexMapKitRouteAnnotationView.m in Sources */,
+				4C5FE38D162587C800028E1B /* YandexBase64.m in Sources */,
+				4C2973151625B9C7007E37CA /* YandexRouteOverlay.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -298,7 +400,7 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
 				SDKROOT = iphoneos;
 			};
 			name = Debug;
@@ -317,7 +419,7 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
 			};
@@ -327,11 +429,21 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				DSTROOT = /tmp/YandexMapKitRoute.dst;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SYSTEM_APPS_DIR)/Xcode.app/Contents/Developer/Library/Frameworks\"",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "YandexMapKitRoute/YandexMapKitRoute-Prefix.pch";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/../../YandexMapKit\"",
+				);
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SCAN_ALL_SOURCE_FILES_FOR_INCLUDES = YES;
 				SKIP_INSTALL = YES;
+				USER_HEADER_SEARCH_PATHS = "";
 			};
 			name = Debug;
 		};
@@ -339,11 +451,21 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				DSTROOT = /tmp/YandexMapKitRoute.dst;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SYSTEM_APPS_DIR)/Xcode.app/Contents/Developer/Library/Frameworks\"",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "YandexMapKitRoute/YandexMapKitRoute-Prefix.pch";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/../../YandexMapKit\"",
+				);
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SCAN_ALL_SOURCE_FILES_FOR_INCLUDES = YES;
 				SKIP_INSTALL = YES;
+				USER_HEADER_SEARCH_PATHS = "";
 			};
 			name = Release;
 		};
@@ -396,6 +518,7 @@
 				4C3D44EA1622F06D00321BA3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		4C3D44EB1622F06D00321BA3 /* Build configuration list for PBXNativeTarget "YandexMapKitRouteTests" */ = {
 			isa = XCConfigurationList;
@@ -404,6 +527,7 @@
 				4C3D44ED1622F06D00321BA3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
