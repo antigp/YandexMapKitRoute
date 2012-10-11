@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		4C2973151625B9C7007E37CA /* YandexRouteOverlay.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C2973141625B9C7007E37CA /* YandexRouteOverlay.m */; };
 		4C2F1B3A1624102000F8ADA4 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C4C4F101622FF19004CEBFC /* UIKit.framework */; };
 		4C3D44C71622F06D00321BA3 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C3D44C61622F06D00321BA3 /* Foundation.framework */; };
 		4C3D44CC1622F06D00321BA3 /* YandexMapKitRoute.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 4C3D44CB1622F06D00321BA3 /* YandexMapKitRoute.h */; };
@@ -48,9 +47,6 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		4C2973131625B9C6007E37CA /* YandexRouteOverlay.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YandexRouteOverlay.h; sourceTree = "<group>"; };
-		4C2973141625B9C7007E37CA /* YandexRouteOverlay.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YandexRouteOverlay.m; sourceTree = "<group>"; };
-		4C2973171625BA25007E37CA /* YMMapOverlayView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YMMapOverlayView.h; sourceTree = "<group>"; };
 		4C3D44C31622F06D00321BA3 /* libYandexMapKitRoute.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libYandexMapKitRoute.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		4C3D44C61622F06D00321BA3 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		4C3D44CA1622F06D00321BA3 /* YandexMapKitRoute-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "YandexMapKitRoute-Prefix.pch"; path = "YandexMapKitRoute/YandexMapKitRoute-Prefix.pch"; sourceTree = SOURCE_ROOT; };
@@ -167,9 +163,6 @@
 				4C5FE3881625826B00028E1B /* YandexMapKitRouteAnnotation.m */,
 				4C5FE38A1625842700028E1B /* YandexMapKitRouteAnnotationView.h */,
 				4C5FE38B1625842700028E1B /* YandexMapKitRouteAnnotationView.m */,
-				4C2973131625B9C6007E37CA /* YandexRouteOverlay.h */,
-				4C2973171625BA25007E37CA /* YMMapOverlayView.h */,
-				4C2973141625B9C7007E37CA /* YandexRouteOverlay.m */,
 			);
 			path = YandexMapKitRoute;
 			sourceTree = "<group>";
@@ -345,7 +338,6 @@
 				4C5FE3891625826B00028E1B /* YandexMapKitRouteAnnotation.m in Sources */,
 				4C5FE38C1625842800028E1B /* YandexMapKitRouteAnnotationView.m in Sources */,
 				4C5FE38D162587C800028E1B /* YandexBase64.m in Sources */,
-				4C2973151625B9C7007E37CA /* YandexRouteOverlay.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
