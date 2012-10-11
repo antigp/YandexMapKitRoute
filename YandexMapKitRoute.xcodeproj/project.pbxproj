@@ -93,6 +93,7 @@
 		4C5FE38B1625842700028E1B /* YandexMapKitRouteAnnotationView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YandexMapKitRouteAnnotationView.m; sourceTree = "<group>"; };
 		4C74249C162308BA00AAF6C7 /* YandexBase64.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = YandexBase64.m; path = YandexMapKitRoute/YandexBase64.m; sourceTree = SOURCE_ROOT; };
 		4C74249D162308BA00AAF6C7 /* YandexBase64.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = YandexBase64.h; path = YandexMapKitRoute/YandexBase64.h; sourceTree = SOURCE_ROOT; };
+		4C9B5E1216271A7A00EB2B1C /* README.md */ = {isa = PBXFileReference; lastKnownFileType = text; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -122,6 +123,7 @@
 		4C3D44B81622F06D00321BA3 = {
 			isa = PBXGroup;
 			children = (
+				4C9B5E1216271A7A00EB2B1C /* README.md */,
 				4C4C4ECD1622F24E004CEBFC /* YandexMapKit */,
 				4C3D44C81622F06D00321BA3 /* YandexMapKitRoute */,
 				4C3D44DD1622F06D00321BA3 /* YandexMapKitRouteTests */,
