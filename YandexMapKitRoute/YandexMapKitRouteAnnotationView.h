@@ -10,7 +10,9 @@
 #import "YandexMapKitRouteDelegate.h"
 
 @interface YandexMapKitRouteAnnotationView : YMKPinAnnotationView
+@property (nonatomic) UIImageView * subImageView;
 @property (nonatomic) NSArray * routeArray;
 @property (nonatomic) fakeYMKMapView * mapView;
 - (void) updateImage;
+
 @end

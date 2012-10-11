@@ -8,12 +8,8 @@
 
 #import <Foundation/Foundation.h>
 #import "YandexMapKit.h"
-#import "YandexRouteOverlay.h"
-typedef struct {
-    BOOL isRouteShows;    /**< the coordinate of the region center */
-    NSUInteger zoomLevel;      /**< the region size */
-    float zoomScale;
-} YMKRouteUpdateState;
+
+
 @interface fakeYMKMapView: YMKMapView{
     
 }

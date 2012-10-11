@@ -81,7 +81,6 @@
             minY=[[position objectForKey:@"Y"] floatValue];
     }
     //Why this? don't know, but work =)
-    NSLog(@"%f,%f",(maxY-minY)/2+minY,(maxX-minX)/2+minX);
-    return YMKMapCoordinateMake((maxY-minY)/15+minY,(maxX-minX)/3.3+minX);
+    return YMKMapCoordinateMake((maxY-minY)/2+minY,(maxX-minX)/2+minX);
 }
 @end

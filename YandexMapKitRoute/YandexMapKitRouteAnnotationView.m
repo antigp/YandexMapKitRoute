@@ -9,7 +9,7 @@
 #import "YandexMapKitRouteAnnotationView.h"
 
 @implementation YandexMapKitRouteAnnotationView
-@synthesize routeArray,mapView;
+@synthesize routeArray,mapView,subImageView;
 - (id)init{
     self=[super init];
     if(self){
@@ -19,14 +19,17 @@
 }
 
 - (void) updateImage{
+    self.subImageView=[self.subviews objectAtIndex:0];
+    self.image=nil;
     float minX=MAXFLOAT;
     float minY=MAXFLOAT;
     float maxX=0;
     float maxY=0;
     float zoomScale = [mapView zoomScale];
-    
-    float constantY=2900*1.78*(21.535057/(mapView.metersInPixel / zoomScale));
-    float constantX=2900*(21.535057/(mapView.metersInPixel / zoomScale));
+    //self.center=CGPointMake(0, 0);
+    self.centerOffset=CGPointMake(0, 0);
+    float constantY=2910*1.774*(21.535057/(mapView.metersInPixel / zoomScale));
+    float constantX=2910*(21.535057/(mapView.metersInPixel / zoomScale));
     for (NSDictionary * position in routeArray) {
         if([[position objectForKey:@"X"] floatValue]>maxX)
             maxX=[[position objectForKey:@"X"] floatValue];
@@ -41,6 +44,8 @@
     maxY=maxY-minY;
     maxX*=constantX;
     maxY*=constantY;
+    
+   
     UIGraphicsBeginImageContext(CGSizeMake(maxX, maxY));
     CGContextRef context = UIGraphicsGetCurrentContext();
    
@@ -58,9 +63,10 @@
     }
     
     CGContextStrokePath(context);
-    
+    NSLog(@"%@",self.subviews);
     self.image = UIGraphicsGetImageFromCurrentImageContext();
     UIGraphicsEndImageContext();
+    
 }
 
 
