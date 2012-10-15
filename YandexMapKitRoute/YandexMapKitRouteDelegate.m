@@ -19,24 +19,22 @@
 }
 
 - (YMKAnnotationView *)mapView:(fakeYMKMapView *)lomapView viewForAnnotation:(YandexMapKitRouteAnnotation *)anAnnotation {
-    static NSString * identifier = @"pointAnnotation";
+    
     YandexMapKitRouteAnnotationView * view;
     if([anAnnotation isKindOfClass:[YandexMapKitRouteAnnotation class]]){
-        view= anAnnotation.view;
+        static NSString * identifier = @"routeAnnotation";
+        view = (YandexMapKitRouteAnnotationView *)[mapView dequeueReusableAnnotationViewWithIdentifier:identifier];
         if (view == nil) {
             view = [[YandexMapKitRouteAnnotationView alloc] initWithAnnotation:anAnnotation
                                                             reuseIdentifier:identifier];
+            view.routeArray=anAnnotation.routeArray;
+            [view initImage];
         }
-        view.routeArray=anAnnotation.routeArray;
         view.mapView=lomapView;
         [view updateImage];
     }
     else{
-        view = (YandexMapKitRouteAnnotationView *)[lomapView dequeueReusableAnnotationViewWithIdentifier:identifier];
-        if (view == nil) {
-            view = [[YandexMapKitRouteAnnotationView alloc] initWithAnnotation:anAnnotation
-                                                    reuseIdentifier:identifier];
-        }
+        
     }
     
     if(anAnnotation==self.anotation){
@@ -47,11 +45,17 @@
 - (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context{
 }
 - (void)mapViewWasDragged:(fakeYMKMapView *)lomapView{
+    if(lomapView.zoomScale!=prevZoomScale){
+        self.anotationView.alpha=0;
+    }
+    prevZoomScale=lomapView.zoomScale;
    [self.anotationView updateImage];
 }
 - (void)mapView:(fakeYMKMapView *)lomapView regionDidChangeAnimated:(BOOL)animated{
     [self.anotationView updateImage];
+    self.anotationView.alpha=1;
 }
 - (void)mapView:(fakeYMKMapView *)lomapView regionWillChangeAnimated:(BOOL)animated{
+    
 }
 @end

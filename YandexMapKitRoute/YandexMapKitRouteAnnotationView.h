@@ -14,5 +14,6 @@
 @property (nonatomic) NSArray * routeArray;
 @property (nonatomic) fakeYMKMapView * mapView;
 - (void) updateImage;
+- (void) initImage;
 
 @end

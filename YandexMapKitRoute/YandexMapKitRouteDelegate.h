@@ -11,16 +11,16 @@
 
 
 @interface fakeYMKMapView: YMKMapView{
-    
 }
 - (float) zoomScale;
 @property (atomic) double metersInPixel;
+@property (nonatomic) BOOL _performingZoomingAnimation;
 
 
 @end
 @class YandexMapKitRouteAnnotationView;
 @interface YandexMapKitRouteDelegate : UIViewController<YMKMapViewDelegate>{
-    
+    float prevZoomScale;
 }
 
 @property (nonatomic) YMKMapView * mapView;
