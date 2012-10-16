@@ -11,6 +11,7 @@
 #import <objc/runtime.h>
 #import "YandexMapKitRouteDelegate.h"
 #import "YandexMapKitRouteAnnotation.h"
+#include "SBJson.h"
 
 
 @implementation YandexMapKitRoute
@@ -18,7 +19,6 @@
 + (NSString *) getRouteStringFrom:(YMKMapCoordinate)from To:(YMKMapCoordinate)to{
    NSString * returnString;
    NSURL * yandexUrl=[NSURL URLWithString:[NSString stringWithFormat:@"http://maps.yandex.ru/actions/get-route/?lang=ru-RU&origin=maps&simplify=1&rll=%f,%f~%f,%f&rtm=atm",from.longitude,from.latitude,to.longitude,to.latitude]];
-    NSLog(@"%@",yandexUrl);
     NSMutableURLRequest *request = [[NSMutableURLRequest alloc] init];
     [request setURL:yandexUrl];
     NSURLResponse* response;
@@ -26,15 +26,10 @@
     
     //Capturing server response
     NSData* result = [NSURLConnection sendSynchronousRequest:request  returningResponse:&response error:&error];
-    //NSJSONSerialization reolization
-    NSDictionary * json = [NSJSONSerialization JSONObjectWithData:result options:0 error:nil];
-    returnString=[[[json valueForKey:@"stages"] valueForKey:@"encodedPoints"] objectAtIndex:0];
-    //\NSJSONSerialization reolization
     //SBJson reolization
-#warning Необходимо написать SBJson реализацию
+    NSDictionary * returnDict=[[[NSString alloc] initWithData:result encoding:NSUTF8StringEncoding] JSONValue];
+    returnString=[[[returnDict valueForKey:@"stages"] valueForKey:@"encodedPoints"] objectAtIndex:0];
     //\SBJson reolization
-    
-    NSLog(@"%@",returnString);
     return returnString;
 }
 + (YandexMapKitRoute *) showRouteOnMap:(YMKMapView *)mapView From:(YMKMapCoordinate) coordinateFrom To: (YMKMapCoordinate) coordinateTo{
