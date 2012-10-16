@@ -18,8 +18,8 @@
     return self;
 }
 - (void) initImage{
+    self.image=nil;
     dispatch_async( dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_BACKGROUND, 0), ^{
-        self.image=nil;
         float minX=MAXFLOAT;
         float minY=MAXFLOAT;
         float maxX=0;
@@ -45,14 +45,14 @@
         maxX*=constantX;
         maxY*=constantY;
         
-        UIGraphicsBeginImageContextWithOptions(CGSizeMake(maxX, maxY),NO,2.0f);
+        UIGraphicsBeginImageContextWithOptions(CGSizeMake(maxX, maxY),NO,0.0f);
         CGContextRef context = UIGraphicsGetCurrentContext();
         
         CGContextTranslateCTM(context, 0,
                               maxY);
         
         CGContextScaleCTM(context, 1.0, -1.0);
-        CGContextSetLineWidth(context, 10.0);
+        CGContextSetLineWidth(context, 5.0);
         CGContextSetStrokeColorWithColor(context, [UIColor colorWithRed:0 green:0 blue:1 alpha:0.5].CGColor);
         
         CGContextMoveToPoint(context, ([[[routeArray objectAtIndex:0] objectForKey:@"X"] floatValue]-minX)*constantX , ([[[routeArray objectAtIndex:0] objectForKey:@"Y"] floatValue]-minY)*constantY);

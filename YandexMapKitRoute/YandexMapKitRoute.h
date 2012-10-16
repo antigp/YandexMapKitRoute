@@ -30,5 +30,4 @@
 @property (nonatomic) YandexMapKitRouteDelegate * delegate;
 @property (nonatomic) YandexMapKitRouteAnnotation * annotation;
 + (YandexMapKitRoute *) showRouteOnMap:(YMKMapView *)mapView From:(YMKMapCoordinate) coordinateFrom To: (YMKMapCoordinate) coordinateTo;
-+ (void) hideAllRoutes;
 @end
