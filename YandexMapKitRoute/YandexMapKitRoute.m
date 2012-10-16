@@ -11,7 +11,6 @@
 #import <objc/runtime.h>
 #import "YandexMapKitRouteDelegate.h"
 #import "YandexMapKitRouteAnnotation.h"
-#include "SBJson.h"
 
 
 @implementation YandexMapKitRoute
@@ -26,10 +25,10 @@
     
     //Capturing server response
     NSData* result = [NSURLConnection sendSynchronousRequest:request  returningResponse:&response error:&error];
-    //SBJson reolization
-    NSDictionary * returnDict=[[[NSString alloc] initWithData:result encoding:NSUTF8StringEncoding] JSONValue];
-    returnString=[[[returnDict valueForKey:@"stages"] valueForKey:@"encodedPoints"] objectAtIndex:0];
-    //\SBJson reolization
+    //NSJSONSerialization reolization
+    NSDictionary * json = [NSJSONSerialization JSONObjectWithData:result options:0 error:nil];
+    returnString=[[[json valueForKey:@"stages"] valueForKey:@"encodedPoints"] objectAtIndex:0];
+    //\NSJSONSerialization reolization
     return returnString;
 }
 + (YandexMapKitRoute *) showRouteOnMap:(YMKMapView *)mapView From:(YMKMapCoordinate) coordinateFrom To: (YMKMapCoordinate) coordinateTo{
