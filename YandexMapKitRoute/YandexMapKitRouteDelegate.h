@@ -24,7 +24,7 @@
 }
 
 @property (nonatomic) YMKMapView * mapView;
-@property (nonatomic) NSObject * oldDelegate;
+@property (nonatomic) id<YMKMapViewDelegate> oldDelegate;
 @property (nonatomic) id<YMKAnnotation> anotation;
 @property (nonatomic) YandexMapKitRouteAnnotationView * anotationView;
 @end

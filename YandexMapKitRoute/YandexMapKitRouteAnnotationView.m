@@ -26,8 +26,8 @@
         float maxY=0;
         
         self.centerOffset=CGPointMake(0, 0);
-        float constantY=2913*1.775*4;
-        float constantX=2913*4;
+        float constantY=2913*1.775*2;
+        float constantX=2913*2;
         
         for (NSDictionary * position in routeArray) {
             if([[position objectForKey:@"X"] floatValue]>maxX)

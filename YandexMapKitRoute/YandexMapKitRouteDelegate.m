@@ -48,6 +48,23 @@
 }
 - (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context{
 }
+
+- (void) mapView:(YMKMapView *)lomapView annotationView:(YMKAnnotationView *)view calloutAccessoryControlTapped:(UIControl *)control{
+    if(view!=anotationView){
+        if([oldDelegate respondsToSelector:@selector(mapView:annotationView:calloutAccessoryControlTapped:)]){
+            [oldDelegate  mapView:lomapView annotationView:view calloutAccessoryControlTapped:control];
+        }
+    }
+}
+
+- (void) mapView:(YMKMapView *)lomapView annotationViewCalloutTapped:(YMKAnnotationView *)view{
+    if(view!=anotationView){
+        if([oldDelegate respondsToSelector:@selector(mapView:annotationViewCalloutTapped:)]){
+            [oldDelegate  mapView:lomapView annotationViewCalloutTapped:view];
+        }
+    }
+}
+
 - (void)mapViewWasDragged:(fakeYMKMapView *)lomapView{
     if(lomapView.zoomScale!=prevZoomScale){
         self.anotationView.alpha=0;
