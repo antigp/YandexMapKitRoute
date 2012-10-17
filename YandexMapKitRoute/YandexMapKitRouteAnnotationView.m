@@ -24,7 +24,6 @@
         float minY=MAXFLOAT;
         float maxX=0;
         float maxY=0;
-        float zoomScale = [mapView zoomScale];
         
         self.centerOffset=CGPointMake(0, 0);
         float constantY=2913*1.775*4;
@@ -61,11 +60,14 @@
         }
         
         CGContextStrokePath(context);
-        
-        self.image = UIGraphicsGetImageFromCurrentImageContext();
+        UIImage * tmpImg=UIGraphicsGetImageFromCurrentImageContext();
         UIGraphicsEndImageContext();
-        self.subImageView=[self.subviews objectAtIndex:0];
-        [self.subImageView addObserver:self forKeyPath:@"frame" options:0 context:NULL];
+        dispatch_sync(dispatch_get_main_queue(), ^{
+            self.subImageView=[self.subviews objectAtIndex:0];
+            [self.subImageView addObserver:self forKeyPath:@"frame" options:0 context:NULL];
+            self.image = tmpImg;
+            [self updateImage];
+        });
     });
 }
 - (void) updateImage{
@@ -100,12 +102,15 @@
     [self.subImageView setFrame:(CGRect){CGPointZero,CGSizeMake(maxX, maxY)}];
 }
 - (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context {
-    if (object == self.subImageView && [keyPath isEqualToString:@"frame"]) {
+    if ([keyPath isEqualToString:@"frame"]) {
        
         if(self.frame.size.width!=self.subImageView.frame.size.width||self.frame.size.height!=self.subImageView.frame.size.height){
-            [self.subImageView setFrame:(CGRect){CGPointZero,CGSizeMake(self.frame.size.width, self.frame.size.height)}];
+            [self setSubImageViewRect];
         }
     }
+}
+- (void) setSubImageViewRect{
+    [self.subImageView setFrame:(CGRect){CGPointZero,CGSizeMake(self.frame.size.width, self.frame.size.height)}];
 }
 - (void)logViewHierarchy:(UIView *) view
 {

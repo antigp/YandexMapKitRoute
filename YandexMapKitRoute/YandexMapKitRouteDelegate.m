@@ -28,10 +28,14 @@
             view = [[YandexMapKitRouteAnnotationView alloc] initWithAnnotation:anAnnotation
                                                             reuseIdentifier:identifier];
             view.routeArray=anAnnotation.routeArray;
+            view.mapView=lomapView;
             [view initImage];
         }
-        view.mapView=lomapView;
-        [view updateImage];
+        else{
+            [view updateImage];
+        }
+        
+        
     }
     else{
         

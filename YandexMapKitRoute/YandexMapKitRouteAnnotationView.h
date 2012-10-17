@@ -15,5 +15,5 @@
 @property (nonatomic) fakeYMKMapView * mapView;
 - (void) updateImage;
 - (void) initImage;
-
+- (void) setSubImageViewRect;
 @end
