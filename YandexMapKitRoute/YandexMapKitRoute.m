@@ -26,16 +26,21 @@
     
     //Capturing server response
     NSData* result = [NSURLConnection sendSynchronousRequest:request  returningResponse:&response error:&error];
-    //SBJson reolization
-    NSDictionary * returnDict=[[[NSString alloc] initWithData:result encoding:NSUTF8StringEncoding] JSONValue];
-    returnString=[[[returnDict valueForKey:@"stages"] valueForKey:@"encodedPoints"] objectAtIndex:0];
-    //\SBJson reolization
+    if(result!=nil){
+        //SBJson reolization
+        NSDictionary * returnDict=[[[NSString alloc] initWithData:result encoding:NSUTF8StringEncoding] JSONValue];
+        returnString=[[[returnDict valueForKey:@"stages"] valueForKey:@"encodedPoints"] objectAtIndex:0];
+        //\SBJson reolization
+    }
     return returnString;
 }
 + (YandexMapKitRoute *) showRouteOnMap:(YMKMapView *)mapView From:(YMKMapCoordinate) coordinateFrom To: (YMKMapCoordinate) coordinateTo{
     YandexMapKitRoute* returnRoute;
     @try {
-        NSArray * geoPointArray = [YandexMapKitRoute parseData:[YandexBase64 decode:[YandexMapKitRoute getRouteStringFrom:coordinateFrom To:coordinateTo]]];
+        NSString * routeString=[YandexMapKitRoute getRouteStringFrom:coordinateFrom To:coordinateTo];
+        if(routeString==nil)
+            return nil;
+        NSArray * geoPointArray = [YandexMapKitRoute parseData:[YandexBase64 decode:routeString]];
         
         returnRoute=[[YandexMapKitRoute alloc] init];
         returnRoute.YMKMapViewInternal = mapView;
