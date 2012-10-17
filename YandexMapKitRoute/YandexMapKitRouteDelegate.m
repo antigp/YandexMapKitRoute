@@ -46,6 +46,9 @@
     }
     return view;
 }
+- (void) mapView:(fakeYMKMapView *)lomapView didAddAnnotationViews:(NSArray *)views{
+    prevZoomScale=lomapView.zoomScale;
+}
 - (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context{
 }
 
@@ -74,6 +77,7 @@
 }
 - (void)mapView:(fakeYMKMapView *)lomapView regionDidChangeAnimated:(BOOL)animated{
     [self.anotationView updateImage];
+    prevZoomScale=lomapView.zoomScale;
     self.anotationView.alpha=1;
 }
 - (void)mapView:(fakeYMKMapView *)lomapView regionWillChangeAnimated:(BOOL)animated{
