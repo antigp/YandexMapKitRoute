@@ -19,18 +19,6 @@
 		4C4C4F111622FF19004CEBFC /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C4C4F101622FF19004CEBFC /* UIKit.framework */; };
 		4C5FE385162580F500028E1B /* YandexMapKitRouteDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C5FE384162580F400028E1B /* YandexMapKitRouteDelegate.m */; };
 		4C5FE38D162587C800028E1B /* YandexBase64.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C74249C162308BA00AAF6C7 /* YandexBase64.m */; };
-		4C6C7DED162D840B00B1A534 /* NSObject+SBJson.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C6C7DD5162D840B00B1A534 /* NSObject+SBJson.m */; };
-		4C6C7DEE162D840B00B1A534 /* SBJsonParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C6C7DD8162D840B00B1A534 /* SBJsonParser.m */; };
-		4C6C7DEF162D840B00B1A534 /* SBJsonStreamParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C6C7DDA162D840B00B1A534 /* SBJsonStreamParser.m */; };
-		4C6C7DF0162D840B00B1A534 /* SBJsonStreamParserAccumulator.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C6C7DDC162D840B00B1A534 /* SBJsonStreamParserAccumulator.m */; };
-		4C6C7DF1162D840B00B1A534 /* SBJsonStreamParserAdapter.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C6C7DDE162D840B00B1A534 /* SBJsonStreamParserAdapter.m */; };
-		4C6C7DF2162D840B00B1A534 /* SBJsonStreamParserState.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C6C7DE0162D840B00B1A534 /* SBJsonStreamParserState.m */; };
-		4C6C7DF3162D840B00B1A534 /* SBJsonStreamWriter.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C6C7DE2162D840B00B1A534 /* SBJsonStreamWriter.m */; };
-		4C6C7DF4162D840B00B1A534 /* SBJsonStreamWriterAccumulator.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C6C7DE4162D840B00B1A534 /* SBJsonStreamWriterAccumulator.m */; };
-		4C6C7DF5162D840B00B1A534 /* SBJsonStreamWriterState.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C6C7DE6162D840B00B1A534 /* SBJsonStreamWriterState.m */; };
-		4C6C7DF6162D840B00B1A534 /* SBJsonTokeniser.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C6C7DE8162D840B00B1A534 /* SBJsonTokeniser.m */; };
-		4C6C7DF7162D840B00B1A534 /* SBJsonUTF8Stream.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C6C7DEA162D840B00B1A534 /* SBJsonUTF8Stream.m */; };
-		4C6C7DF8162D840B00B1A534 /* SBJsonWriter.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C6C7DEC162D840B00B1A534 /* SBJsonWriter.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -154,7 +142,6 @@
 		4C3D44B81622F06D00321BA3 = {
 			isa = PBXGroup;
 			children = (
-				4C6C7DD3162D83ED00B1A534 /* SBJson */,
 				4C9B5E1216271A7A00EB2B1C /* README.md */,
 				4C4C4ECD1622F24E004CEBFC /* YandexMapKit */,
 				4C3D44C81622F06D00321BA3 /* YandexMapKitRoute */,
@@ -265,38 +252,6 @@
 			name = Headers;
 			sourceTree = "<group>";
 		};
-		4C6C7DD3162D83ED00B1A534 /* SBJson */ = {
-			isa = PBXGroup;
-			children = (
-				4C6C7DD4162D840B00B1A534 /* NSObject+SBJson.h */,
-				4C6C7DD5162D840B00B1A534 /* NSObject+SBJson.m */,
-				4C6C7DD6162D840B00B1A534 /* SBJson.h */,
-				4C6C7DD7162D840B00B1A534 /* SBJsonParser.h */,
-				4C6C7DD8162D840B00B1A534 /* SBJsonParser.m */,
-				4C6C7DD9162D840B00B1A534 /* SBJsonStreamParser.h */,
-				4C6C7DDA162D840B00B1A534 /* SBJsonStreamParser.m */,
-				4C6C7DDB162D840B00B1A534 /* SBJsonStreamParserAccumulator.h */,
-				4C6C7DDC162D840B00B1A534 /* SBJsonStreamParserAccumulator.m */,
-				4C6C7DDD162D840B00B1A534 /* SBJsonStreamParserAdapter.h */,
-				4C6C7DDE162D840B00B1A534 /* SBJsonStreamParserAdapter.m */,
-				4C6C7DDF162D840B00B1A534 /* SBJsonStreamParserState.h */,
-				4C6C7DE0162D840B00B1A534 /* SBJsonStreamParserState.m */,
-				4C6C7DE1162D840B00B1A534 /* SBJsonStreamWriter.h */,
-				4C6C7DE2162D840B00B1A534 /* SBJsonStreamWriter.m */,
-				4C6C7DE3162D840B00B1A534 /* SBJsonStreamWriterAccumulator.h */,
-				4C6C7DE4162D840B00B1A534 /* SBJsonStreamWriterAccumulator.m */,
-				4C6C7DE5162D840B00B1A534 /* SBJsonStreamWriterState.h */,
-				4C6C7DE6162D840B00B1A534 /* SBJsonStreamWriterState.m */,
-				4C6C7DE7162D840B00B1A534 /* SBJsonTokeniser.h */,
-				4C6C7DE8162D840B00B1A534 /* SBJsonTokeniser.m */,
-				4C6C7DE9162D840B00B1A534 /* SBJsonUTF8Stream.h */,
-				4C6C7DEA162D840B00B1A534 /* SBJsonUTF8Stream.m */,
-				4C6C7DEB162D840B00B1A534 /* SBJsonWriter.h */,
-				4C6C7DEC162D840B00B1A534 /* SBJsonWriter.m */,
-			);
-			name = SBJson;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -398,18 +353,6 @@
 				4C3D44CE1622F06D00321BA3 /* YandexMapKitRoute.m in Sources */,
 				4C5FE385162580F500028E1B /* YandexMapKitRouteDelegate.m in Sources */,
 				4C5FE38D162587C800028E1B /* YandexBase64.m in Sources */,
-				4C6C7DED162D840B00B1A534 /* NSObject+SBJson.m in Sources */,
-				4C6C7DEE162D840B00B1A534 /* SBJsonParser.m in Sources */,
-				4C6C7DEF162D840B00B1A534 /* SBJsonStreamParser.m in Sources */,
-				4C6C7DF0162D840B00B1A534 /* SBJsonStreamParserAccumulator.m in Sources */,
-				4C6C7DF1162D840B00B1A534 /* SBJsonStreamParserAdapter.m in Sources */,
-				4C6C7DF2162D840B00B1A534 /* SBJsonStreamParserState.m in Sources */,
-				4C6C7DF3162D840B00B1A534 /* SBJsonStreamWriter.m in Sources */,
-				4C6C7DF4162D840B00B1A534 /* SBJsonStreamWriterAccumulator.m in Sources */,
-				4C6C7DF5162D840B00B1A534 /* SBJsonStreamWriterState.m in Sources */,
-				4C6C7DF6162D840B00B1A534 /* SBJsonTokeniser.m in Sources */,
-				4C6C7DF7162D840B00B1A534 /* SBJsonUTF8Stream.m in Sources */,
-				4C6C7DF8162D840B00B1A534 /* SBJsonWriter.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
