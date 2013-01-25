@@ -10,7 +10,6 @@
 #import "YandexBase64.h"
 #import <objc/runtime.h>
 #import "YandexMapKitRouteDelegate.h"
-#include "SBJson.h"
 
 
 @implementation YandexMapKitRoute
