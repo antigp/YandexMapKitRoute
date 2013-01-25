@@ -10,14 +10,15 @@
 #import "YandexBase64.h"
 #import <objc/runtime.h>
 #import "YandexMapKitRouteDelegate.h"
-#import "YandexMapKitRouteAnnotation.h"
 #include "SBJson.h"
 
 
 @implementation YandexMapKitRoute
-@synthesize YMKMapViewInternal,YXScrollView;
+@synthesize YMKMapViewInternal,YXScrollView,delegate;
+
 + (NSString *) getRouteStringFrom:(YMKMapCoordinate)from To:(YMKMapCoordinate)to{
    NSString * returnString;
+    //Address to request route
    NSURL * yandexUrl=[NSURL URLWithString:[NSString stringWithFormat:@"http://maps.yandex.ru/actions/get-route/?lang=ru-RU&origin=maps&simplify=1&rll=%f,%f~%f,%f&rtm=atm",from.longitude,from.latitude,to.longitude,to.latitude]];
     NSMutableURLRequest *request = [[NSMutableURLRequest alloc] init];
     [request setURL:yandexUrl];
@@ -27,41 +28,65 @@
     //Capturing server response
     NSData* result = [NSURLConnection sendSynchronousRequest:request  returningResponse:&response error:&error];
     if(result!=nil){
-        //SBJson reolization
-        NSDictionary * returnDict=[[[NSString alloc] initWithData:result encoding:NSUTF8StringEncoding] JSONValue];
-        returnString=[[[returnDict valueForKey:@"stages"] valueForKey:@"encodedPoints"] objectAtIndex:0];
-        //\SBJson reolization
+        //NSJSONSerialization reolization
+        NSDictionary * json = [NSJSONSerialization JSONObjectWithData:result options:0 error:nil];
+        returnString=[[[json valueForKey:@"stages"] valueForKey:@"encodedPoints"] objectAtIndex:0];
+        //\NSJSONSerialization reolization
+        
+        //USE this for ios < 5 support
+            //SBJson reolization
+            //NSDictionary * returnDict=[[[NSString alloc] initWithData:result encoding:NSUTF8StringEncoding] JSONValue];
+            //returnString=[[[returnDict valueForKey:@"stages"] valueForKey:@"encodedPoints"] objectAtIndex:0];
+            //\SBJson reolization
     }
     return returnString;
 }
+
 + (YandexMapKitRoute *) showRouteOnMap:(YMKMapView *)mapView From:(YMKMapCoordinate) coordinateFrom To: (YMKMapCoordinate) coordinateTo{
     YandexMapKitRoute* returnRoute;
     @try {
+        //Check if already have routeView
+        if([[((UIScrollView<UIScrollViewDelegate> *) [mapView.subviews objectAtIndex:1]).subviews objectAtIndex:1] isKindOfClass:[YandexMapKitRoute class]]){
+            //Update existen
+            returnRoute=[((UIScrollView<UIScrollViewDelegate> *) [mapView.subviews objectAtIndex:1]).subviews objectAtIndex:1];
+        }
+        else{
+            //Create new View
+            returnRoute = [[YandexMapKitRoute alloc] initWithFrame:(CGRect){0,0,mapView.frame.size}];
+            //Get UIScrollView
+            returnRoute.YXScrollView = (UIScrollView<UIScrollViewDelegate> *) [mapView.subviews objectAtIndex:1];
+            //Insert RouteView
+            [returnRoute.YXScrollView insertSubview:returnRoute atIndex:1];
+            returnRoute.YMKMapViewInternal = mapView;
+            
+            //Set proxy delegate to handle events
+            YandexMapKitRouteDelegate * delegate=[[YandexMapKitRouteDelegate alloc] init];
+            if(mapView.delegate!=nil)
+                delegate.oldDelegate=mapView.delegate;
+            delegate.mapView=mapView;
+            mapView.delegate=nil;
+            mapView.delegate=delegate;
+            
+            //Setting properties of Route view
+            [returnRoute setBackgroundColor:[UIColor clearColor]];
+            [returnRoute setUserInteractionEnabled:NO];
+            
+            delegate.route=returnRoute;
+            returnRoute.delegate= delegate;
+        }
+        
         NSString * routeString=[YandexMapKitRoute getRouteStringFrom:coordinateFrom To:coordinateTo];
         if(routeString==nil)
             return nil;
-        NSArray * geoPointArray = [YandexMapKitRoute parseData:[YandexBase64 decode:routeString]];
-        
-        returnRoute=[[YandexMapKitRoute alloc] init];
-        returnRoute.YMKMapViewInternal = mapView;
-        YandexMapKitRouteDelegate * delegate=[[YandexMapKitRouteDelegate alloc] init];
-        returnRoute.delegate= delegate;
-        if(mapView.delegate!=nil)
-            delegate.oldDelegate=mapView.delegate;
-        delegate.mapView=mapView;
-        mapView.delegate=nil;
-        mapView.delegate=delegate;
+        returnRoute.geoPointArray = [YandexMapKitRoute parseData:[YandexBase64 decode:routeString]];
         
         
-        returnRoute.YXScrollView = (UIScrollView<UIScrollViewDelegate> *) [mapView.subviews objectAtIndex:1];
-        returnRoute.YMMapOverlayView=[returnRoute.YXScrollView.subviews objectAtIndex:1];
         
-        returnRoute.annotation=[[YandexMapKitRouteAnnotation alloc] init];
+        CGRect frame=returnRoute.frame;
+        frame.origin=returnRoute.YXScrollView.contentOffset;
+        returnRoute.frame=frame;
+        [returnRoute setNeedsDisplay];
         
-        returnRoute.annotation.coordinate=[returnRoute calcMediumCoordinateOfArray:geoPointArray];
-        returnRoute.annotation.routeArray=geoPointArray;
-        delegate.anotation=returnRoute.annotation;
-        [mapView addAnnotation:returnRoute.annotation];
     }
     @catch (NSException *exception) {
         NSLog(@"Can't show route");
@@ -70,11 +95,40 @@
         return returnRoute;
     }
 }
-- (BOOL)respondsToSelector:(SEL)aSelector{
-    NSLog(@"selector %@",NSStringFromSelector(aSelector));
-    return [super respondsToSelector:(SEL)aSelector];
+- (void) drawRect:(CGRect)rect{
+    //Get values of zoom
+    float zoomScale = [(fakeYMKMapView *)self.YMKMapViewInternal zoomScale];
+    float metersInPixel = ((fakeYMKMapView *)self.YMKMapViewInternal).metersInPixel;
+    
+    //Magic constat numbers need to convert lat and long to pixel by zoom level
+    float constantY=2913*1.775*2*(10.76/(metersInPixel / zoomScale));
+    float constantX=2913*2*(10.76/(metersInPixel / zoomScale));
+    
+    //Lat and long of zero point rect
+    float  minY=self.YMKMapViewInternal.region.center.latitude+(self.YMKMapViewInternal.region.span.latitudeDelta/2);
+    float  minX=self.YMKMapViewInternal.region.center.longitude-(self.YMKMapViewInternal.region.span.longitudeDelta/2);
+    
+    //Setting CGContext
+    CGContextRef context = UIGraphicsGetCurrentContext();
+    CGContextTranslateCTM(context, 0, 0);
+    CGContextScaleCTM(context, 1.0, -1.0);
+    //Width of route line
+    CGContextSetLineWidth(context, 5.0);
+    //Color of route line
+    CGContextSetStrokeColorWithColor(context, [UIColor colorWithRed:0 green:0 blue:1 alpha:0.5].CGColor);
+    
+    //Move to first position of route
+    CGContextMoveToPoint(context, ([[[_geoPointArray objectAtIndex:0] objectForKey:@"X"] floatValue]-minX)*constantX , ([[[_geoPointArray objectAtIndex:0] objectForKey:@"Y"] floatValue]-minY)*constantY);
+    for (NSDictionary * position in _geoPointArray) {
+        //Draw route
+        CGContextAddLineToPoint(context, ([[position objectForKey:@"X"] floatValue]-minX)*constantX,([[position objectForKey:@"Y"] floatValue]-minY)*constantY);
+    }
+    
+    CGContextStrokePath(context);
+    
 }
 
+//Function to convert Yandex dif coordinate to absoulute lat long coordinate
 + (NSArray *) parseData:(NSData *) globalData{
     int lastx=0;
     int lasty=0;
@@ -90,23 +144,5 @@
     }
     return mutablePoints;
 }
-- (YMKMapCoordinate) calcMediumCoordinateOfArray:(NSArray*) routeArray{
-    float minX=MAXFLOAT;
-    float minY=MAXFLOAT;
-    float maxX=0;
-    float maxY=0;
-    
-    for (NSDictionary * position in routeArray) {
-        if([[position objectForKey:@"X"] floatValue]>maxX)
-            maxX=[[position objectForKey:@"X"] floatValue];
-        if([[position objectForKey:@"Y"] floatValue]>maxY)
-            maxY=[[position objectForKey:@"Y"] floatValue];
-        if([[position objectForKey:@"X"] floatValue]<minX)
-            minX=[[position objectForKey:@"X"] floatValue];
-        if([[position objectForKey:@"Y"] floatValue]<minY)
-            minY=[[position objectForKey:@"Y"] floatValue];
-    }
-    //Why this? don't know, but work =)
-    return YMKMapCoordinateMake((maxY-minY)/2+minY,(maxX-minX)/2+minX);
-}
+
 @end

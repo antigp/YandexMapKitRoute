@@ -18,8 +18,6 @@
 		4C3D44E51622F06D00321BA3 /* YandexMapKitRouteTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C3D44E41622F06D00321BA3 /* YandexMapKitRouteTests.m */; };
 		4C4C4F111622FF19004CEBFC /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C4C4F101622FF19004CEBFC /* UIKit.framework */; };
 		4C5FE385162580F500028E1B /* YandexMapKitRouteDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C5FE384162580F400028E1B /* YandexMapKitRouteDelegate.m */; };
-		4C5FE3891625826B00028E1B /* YandexMapKitRouteAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C5FE3881625826B00028E1B /* YandexMapKitRouteAnnotation.m */; };
-		4C5FE38C1625842800028E1B /* YandexMapKitRouteAnnotationView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C5FE38B1625842700028E1B /* YandexMapKitRouteAnnotationView.m */; };
 		4C5FE38D162587C800028E1B /* YandexBase64.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C74249C162308BA00AAF6C7 /* YandexBase64.m */; };
 		4C6C7DED162D840B00B1A534 /* NSObject+SBJson.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C6C7DD5162D840B00B1A534 /* NSObject+SBJson.m */; };
 		4C6C7DEE162D840B00B1A534 /* SBJsonParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C6C7DD8162D840B00B1A534 /* SBJsonParser.m */; };
@@ -99,10 +97,6 @@
 		4C4C4F101622FF19004CEBFC /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		4C5FE383162580F400028E1B /* YandexMapKitRouteDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YandexMapKitRouteDelegate.h; sourceTree = "<group>"; };
 		4C5FE384162580F400028E1B /* YandexMapKitRouteDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YandexMapKitRouteDelegate.m; sourceTree = "<group>"; };
-		4C5FE3871625826B00028E1B /* YandexMapKitRouteAnnotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YandexMapKitRouteAnnotation.h; sourceTree = "<group>"; };
-		4C5FE3881625826B00028E1B /* YandexMapKitRouteAnnotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YandexMapKitRouteAnnotation.m; sourceTree = "<group>"; };
-		4C5FE38A1625842700028E1B /* YandexMapKitRouteAnnotationView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YandexMapKitRouteAnnotationView.h; sourceTree = "<group>"; };
-		4C5FE38B1625842700028E1B /* YandexMapKitRouteAnnotationView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YandexMapKitRouteAnnotationView.m; sourceTree = "<group>"; };
 		4C6C7DD4162D840B00B1A534 /* NSObject+SBJson.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+SBJson.h"; sourceTree = "<group>"; };
 		4C6C7DD5162D840B00B1A534 /* NSObject+SBJson.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+SBJson.m"; sourceTree = "<group>"; };
 		4C6C7DD6162D840B00B1A534 /* SBJson.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJson.h; sourceTree = "<group>"; };
@@ -199,10 +193,6 @@
 				4C3D44C91622F06D00321BA3 /* Supporting Files */,
 				4C5FE383162580F400028E1B /* YandexMapKitRouteDelegate.h */,
 				4C5FE384162580F400028E1B /* YandexMapKitRouteDelegate.m */,
-				4C5FE3871625826B00028E1B /* YandexMapKitRouteAnnotation.h */,
-				4C5FE3881625826B00028E1B /* YandexMapKitRouteAnnotation.m */,
-				4C5FE38A1625842700028E1B /* YandexMapKitRouteAnnotationView.h */,
-				4C5FE38B1625842700028E1B /* YandexMapKitRouteAnnotationView.m */,
 			);
 			path = YandexMapKitRoute;
 			sourceTree = "<group>";
@@ -407,8 +397,6 @@
 			files = (
 				4C3D44CE1622F06D00321BA3 /* YandexMapKitRoute.m in Sources */,
 				4C5FE385162580F500028E1B /* YandexMapKitRouteDelegate.m in Sources */,
-				4C5FE3891625826B00028E1B /* YandexMapKitRouteAnnotation.m in Sources */,
-				4C5FE38C1625842800028E1B /* YandexMapKitRouteAnnotationView.m in Sources */,
 				4C5FE38D162587C800028E1B /* YandexBase64.m in Sources */,
 				4C6C7DED162D840B00B1A534 /* NSObject+SBJson.m in Sources */,
 				4C6C7DEE162D840B00B1A534 /* SBJsonParser.m in Sources */,

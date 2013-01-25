@@ -18,13 +18,11 @@
 
 
 @end
-@class YandexMapKitRouteAnnotationView;
+@class YandexMapKitRoute;
 @interface YandexMapKitRouteDelegate : UIViewController<YMKMapViewDelegate>{
-    float prevZoomScale;
 }
 
 @property (nonatomic) YMKMapView * mapView;
 @property (nonatomic) id<YMKMapViewDelegate> oldDelegate;
-@property (nonatomic) id<YMKAnnotation> anotation;
-@property (nonatomic) YandexMapKitRouteAnnotationView * anotationView;
+@property (nonatomic) YandexMapKitRoute * route;
 @end

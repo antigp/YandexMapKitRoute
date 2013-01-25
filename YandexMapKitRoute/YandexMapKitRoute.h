@@ -11,7 +11,6 @@
 
 
 @class YandexMapKitRouteDelegate;
-@class YandexMapKitRouteAnnotation;
 
 @interface YMKMapViewInternal : UIView
 - (CGPoint) mapOverlayView: (UIView *) obj viewPointForXY:(CGPoint) point;
@@ -21,13 +20,12 @@
 - (BOOL) mapOverlayView:(id) obj shouldScrollAnnotationViewToVisible:(id) obj2;
 @end
 
-@interface YandexMapKitRoute : NSObject{
-    
+@interface YandexMapKitRoute : UIView{
+
 }
 @property (nonatomic) YMKMapView * YMKMapViewInternal;
 @property (nonatomic) UIScrollView<UIScrollViewDelegate> * YXScrollView;
-@property (nonatomic) UIView * YMMapOverlayView;
 @property (nonatomic) YandexMapKitRouteDelegate * delegate;
-@property (nonatomic) YandexMapKitRouteAnnotation * annotation;
+@property (nonatomic) NSArray * geoPointArray;
 + (YandexMapKitRoute *) showRouteOnMap:(YMKMapView *)mapView From:(YMKMapCoordinate) coordinateFrom To: (YMKMapCoordinate) coordinateTo;
 @end

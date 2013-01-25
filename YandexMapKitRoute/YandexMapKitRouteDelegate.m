@@ -8,79 +8,42 @@
 
 #import "YandexMapKitRouteDelegate.h"
 #import "YandexMapKit.h"
-#import "YandexMapKitRouteAnnotation.h"
-#import "YandexMapKitRouteAnnotationView.h"
+#import "YandexMapKitRoute.h"
 
 @implementation YandexMapKitRouteDelegate
-@synthesize oldDelegate,mapView,anotation,anotationView;
-- (BOOL)respondsToSelector:(SEL)aSelector{
-    //NSLog(@"selector %@",NSStringFromSelector(aSelector));
-    return [super respondsToSelector:(SEL)aSelector];
+@synthesize oldDelegate,mapView;
+
+//Update route view, if scroll or zoom change
+- (void)mapViewWasDragged:(fakeYMKMapView *)lomapView{
+    CGRect frame=_route.frame;
+    frame.origin=_route.YXScrollView.contentOffset;
+    _route.frame=frame;
+    [_route setNeedsDisplay];
+}
+- (void)mapView:(fakeYMKMapView *)lomapView regionDidChangeAnimated:(BOOL)animated{
+    CGRect frame=_route.frame;
+    frame.origin=_route.YXScrollView.contentOffset;
+    _route.frame=frame;
+    [_route setNeedsDisplay];
+}
+- (void)mapView:(fakeYMKMapView *)lomapView regionWillChangeAnimated:(BOOL)animated{
+    CGRect frame=_route.frame;
+    frame.origin=_route.YXScrollView.contentOffset;
+    _route.frame=frame;
+    [_route setNeedsDisplay];
 }
 
-- (YMKAnnotationView *)mapView:(fakeYMKMapView *)lomapView viewForAnnotation:(YandexMapKitRouteAnnotation *)anAnnotation {
-    
-    YandexMapKitRouteAnnotationView * view;
-    if([anAnnotation isKindOfClass:[YandexMapKitRouteAnnotation class]]){
-        static NSString * identifier = @"routeAnnotation";
-        view = (YandexMapKitRouteAnnotationView *)[mapView dequeueReusableAnnotationViewWithIdentifier:identifier];
-        if (view == nil) {
-            view = [[YandexMapKitRouteAnnotationView alloc] initWithAnnotation:anAnnotation
-                                                            reuseIdentifier:identifier];
-            view.routeArray=anAnnotation.routeArray;
-            view.mapView=lomapView;
-            [view initImage];
-        }
-        else{
-            [view updateImage];
-        }
-        
-        
-    }
-    else{
-        
-    }
-    
-    if(anAnnotation==self.anotation){
-        self.anotationView=view;
-    }
-    return view;
-}
-- (void) mapView:(fakeYMKMapView *)lomapView didAddAnnotationViews:(NSArray *)views{
-    prevZoomScale=lomapView.zoomScale;
-}
-- (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context{
-}
-
+//Send event's for oldDelegate, may be need to write new
+#pragma mark Proxy functions
 - (void) mapView:(YMKMapView *)lomapView annotationView:(YMKAnnotationView *)view calloutAccessoryControlTapped:(UIControl *)control{
-    if(view!=anotationView){
-        if([oldDelegate respondsToSelector:@selector(mapView:annotationView:calloutAccessoryControlTapped:)]){
-            [oldDelegate  mapView:lomapView annotationView:view calloutAccessoryControlTapped:control];
-        }
+    if([oldDelegate respondsToSelector:@selector(mapView:annotationView:calloutAccessoryControlTapped:)]){
+        [oldDelegate  mapView:lomapView annotationView:view calloutAccessoryControlTapped:control];
     }
 }
 
 - (void) mapView:(YMKMapView *)lomapView annotationViewCalloutTapped:(YMKAnnotationView *)view{
-    if(view!=anotationView){
-        if([oldDelegate respondsToSelector:@selector(mapView:annotationViewCalloutTapped:)]){
-            [oldDelegate  mapView:lomapView annotationViewCalloutTapped:view];
-        }
+    if([oldDelegate respondsToSelector:@selector(mapView:annotationViewCalloutTapped:)]){
+        [oldDelegate  mapView:lomapView annotationViewCalloutTapped:view];
     }
-}
-
-- (void)mapViewWasDragged:(fakeYMKMapView *)lomapView{
-    if(lomapView.zoomScale!=prevZoomScale){
-        self.anotationView.alpha=0;
-    }
-    prevZoomScale=lomapView.zoomScale;
-   [self.anotationView updateImage];
-}
-- (void)mapView:(fakeYMKMapView *)lomapView regionDidChangeAnimated:(BOOL)animated{
-    [self.anotationView updateImage];
-    prevZoomScale=lomapView.zoomScale;
-    self.anotationView.alpha=1;
-}
-- (void)mapView:(fakeYMKMapView *)lomapView regionWillChangeAnimated:(BOOL)animated{
-    
 }
 @end
