@@ -1,0 +1,1 @@
+{"tagline":"Прокладка маршрута для Yandex MapKit","body":"USAGE \r\n\r\n[YandexMapKitRoute showRouteOnMap:(YMKMapView *)mapView From:(YMKMapCoordinate) coordinateFrom To: (YMKMapCoordinate) coordinateTo];\r\n","google":"","note":"Don't delete this file! It's used internally to help with page regeneration.","name":"Yandexmapkitroute"}
