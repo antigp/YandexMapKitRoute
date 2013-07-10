@@ -1,0 +1,674 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		4C7D447E178DA4C300219847 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C7D447D178DA4C300219847 /* UIKit.framework */; };
+		4C7D4480178DA4C300219847 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C7D447F178DA4C300219847 /* Foundation.framework */; };
+		4C7D4482178DA4C300219847 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C7D4481178DA4C300219847 /* CoreGraphics.framework */; };
+		4C7D4488178DA4C300219847 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4C7D4486178DA4C300219847 /* InfoPlist.strings */; };
+		4C7D448A178DA4C300219847 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C7D4489178DA4C300219847 /* main.m */; };
+		4C7D448E178DA4C300219847 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C7D448D178DA4C300219847 /* AppDelegate.m */; };
+		4C7D4490178DA4C300219847 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 4C7D448F178DA4C300219847 /* Default.png */; };
+		4C7D4492178DA4C300219847 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4C7D4491178DA4C300219847 /* Default@2x.png */; };
+		4C7D4494178DA4C300219847 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4C7D4493178DA4C300219847 /* Default-568h@2x.png */; };
+		4C7D4497178DA4C300219847 /* MainStoryboard_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4C7D4495178DA4C300219847 /* MainStoryboard_iPhone.storyboard */; };
+		4C7D449D178DA4C300219847 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C7D449C178DA4C300219847 /* ViewController.m */; };
+		4C7D44A5178DA4C300219847 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C7D44A4178DA4C300219847 /* SenTestingKit.framework */; };
+		4C7D44A6178DA4C300219847 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C7D447D178DA4C300219847 /* UIKit.framework */; };
+		4C7D44A7178DA4C300219847 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C7D447F178DA4C300219847 /* Foundation.framework */; };
+		4C7D44AF178DA4C300219847 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4C7D44AD178DA4C300219847 /* InfoPlist.strings */; };
+		4C7D44B2178DA4C300219847 /* YandexMapKitRouteExampleTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C7D44B1178DA4C300219847 /* YandexMapKitRouteExampleTests.m */; };
+		4C7D44C4178DA54000219847 /* libYandexMapKitRoute.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C7D44C1178DA53C00219847 /* libYandexMapKitRoute.a */; };
+		4C7D44E5178DA74400219847 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C7D44E4178DA74400219847 /* AudioToolbox.framework */; };
+		4C7D44E7178DA74C00219847 /* OpenAL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C7D44E6178DA74C00219847 /* OpenAL.framework */; };
+		4C7D44E9178DA75100219847 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C7D44E8178DA75100219847 /* AVFoundation.framework */; };
+		4C7D44EB178DA75700219847 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C7D44EA178DA75700219847 /* CoreData.framework */; };
+		4C7D44ED178DA76000219847 /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C7D44EC178DA76000219847 /* CoreTelephony.framework */; };
+		4C7D44EF178DA76800219847 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C7D44EE178DA76800219847 /* libsqlite3.dylib */; };
+		4C7D44F1178DA77000219847 /* libstdc++.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C7D44F0178DA77000219847 /* libstdc++.dylib */; };
+		4C7D44F3178DA77700219847 /* libxml2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C7D44F2178DA77700219847 /* libxml2.dylib */; };
+		4C7D44F5178DA77E00219847 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C7D44F4178DA77E00219847 /* libz.dylib */; };
+		4C7D44F7178DA78300219847 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C7D44F6178DA78300219847 /* MessageUI.framework */; };
+		4C7D44F9178DA78900219847 /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C7D44F8178DA78900219847 /* OpenGLES.framework */; };
+		4C7D44FB178DA79100219847 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C7D44FA178DA79100219847 /* QuartzCore.framework */; };
+		4C7D44FD178DA79700219847 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C7D44FC178DA79700219847 /* Security.framework */; };
+		4C7D44FF178DA79C00219847 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C7D44FE178DA79C00219847 /* SystemConfiguration.framework */; };
+		4C7D451E178DA83500219847 /* libYandexMapKit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C7D451C178DA83500219847 /* libYandexMapKit.a */; };
+		4C7D451F178DA83500219847 /* YandexMapKit.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 4C7D451D178DA83500219847 /* YandexMapKit.bundle */; };
+		4C7D4521178DA91700219847 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C7D4520178DA91700219847 /* CoreLocation.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		4C7D44A8178DA4C300219847 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4C7D4472178DA4C300219847 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4C7D4479178DA4C300219847;
+			remoteInfo = YandexMapKitRouteExample;
+		};
+		4C7D44C0178DA53C00219847 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4C7D44BB178DA53B00219847 /* YandexMapKitRoute.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 4C3D44C31622F06D00321BA3;
+			remoteInfo = YandexMapKitRoute;
+		};
+		4C7D44C2178DA53C00219847 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4C7D44BB178DA53B00219847 /* YandexMapKitRoute.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 4C3D44D41622F06D00321BA3;
+			remoteInfo = YandexMapKitRouteTests;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		4C7D447A178DA4C300219847 /* YandexMapKitRouteExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YandexMapKitRouteExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		4C7D447D178DA4C300219847 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		4C7D447F178DA4C300219847 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		4C7D4481178DA4C300219847 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		4C7D4485178DA4C300219847 /* YandexMapKitRouteExample-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "YandexMapKitRouteExample-Info.plist"; sourceTree = "<group>"; };
+		4C7D4487178DA4C300219847 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		4C7D4489178DA4C300219847 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		4C7D448B178DA4C300219847 /* YandexMapKitRouteExample-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "YandexMapKitRouteExample-Prefix.pch"; sourceTree = "<group>"; };
+		4C7D448C178DA4C300219847 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		4C7D448D178DA4C300219847 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		4C7D448F178DA4C300219847 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		4C7D4491178DA4C300219847 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		4C7D4493178DA4C300219847 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		4C7D4496178DA4C300219847 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPhone.storyboard; sourceTree = "<group>"; };
+		4C7D449B178DA4C300219847 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		4C7D449C178DA4C300219847 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		4C7D44A3178DA4C300219847 /* YandexMapKitRouteExampleTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = YandexMapKitRouteExampleTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
+		4C7D44A4178DA4C300219847 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
+		4C7D44AC178DA4C300219847 /* YandexMapKitRouteExampleTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "YandexMapKitRouteExampleTests-Info.plist"; sourceTree = "<group>"; };
+		4C7D44AE178DA4C300219847 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		4C7D44B0178DA4C300219847 /* YandexMapKitRouteExampleTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YandexMapKitRouteExampleTests.h; sourceTree = "<group>"; };
+		4C7D44B1178DA4C300219847 /* YandexMapKitRouteExampleTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YandexMapKitRouteExampleTests.m; sourceTree = "<group>"; };
+		4C7D44BB178DA53B00219847 /* YandexMapKitRoute.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = YandexMapKitRoute.xcodeproj; path = ../YandexMapKitRoute.xcodeproj; sourceTree = "<group>"; };
+		4C7D44E4178DA74400219847 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		4C7D44E6178DA74C00219847 /* OpenAL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenAL.framework; path = System/Library/Frameworks/OpenAL.framework; sourceTree = SDKROOT; };
+		4C7D44E8178DA75100219847 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		4C7D44EA178DA75700219847 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		4C7D44EC178DA76000219847 /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
+		4C7D44EE178DA76800219847 /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
+		4C7D44F0178DA77000219847 /* libstdc++.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libstdc++.dylib"; path = "usr/lib/libstdc++.dylib"; sourceTree = SDKROOT; };
+		4C7D44F2178DA77700219847 /* libxml2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libxml2.dylib; path = usr/lib/libxml2.dylib; sourceTree = SDKROOT; };
+		4C7D44F4178DA77E00219847 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
+		4C7D44F6178DA78300219847 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
+		4C7D44F8178DA78900219847 /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
+		4C7D44FA178DA79100219847 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		4C7D44FC178DA79700219847 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		4C7D44FE178DA79C00219847 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		4C7D4502178DA83400219847 /* NSValue+YMKMapCoordinate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSValue+YMKMapCoordinate.h"; sourceTree = "<group>"; };
+		4C7D4503178DA83400219847 /* YandexMapKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YandexMapKit.h; sourceTree = "<group>"; };
+		4C7D4504178DA83400219847 /* YMKAnnotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YMKAnnotation.h; sourceTree = "<group>"; };
+		4C7D4505178DA83400219847 /* YMKAnnotationImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YMKAnnotationImage.h; sourceTree = "<group>"; };
+		4C7D4506178DA83400219847 /* YMKAnnotationView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YMKAnnotationView.h; sourceTree = "<group>"; };
+		4C7D4507178DA83400219847 /* YMKCalloutContentView-Protocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "YMKCalloutContentView-Protocol.h"; sourceTree = "<group>"; };
+		4C7D4508178DA83400219847 /* YMKCalloutView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YMKCalloutView.h; sourceTree = "<group>"; };
+		4C7D4509178DA83400219847 /* YMKConfiguration.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YMKConfiguration.h; sourceTree = "<group>"; };
+		4C7D450A178DA83400219847 /* YMKConsoleLogging.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YMKConsoleLogging.h; sourceTree = "<group>"; };
+		4C7D450B178DA83400219847 /* YMKDraggableAnnotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YMKDraggableAnnotation.h; sourceTree = "<group>"; };
+		4C7D450C178DA83400219847 /* YMKDraggablePinAnnotationView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YMKDraggablePinAnnotationView.h; sourceTree = "<group>"; };
+		4C7D450D178DA83400219847 /* YMKDraggablePinAnnotationViewDelegate+Protocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "YMKDraggablePinAnnotationViewDelegate+Protocol.h"; sourceTree = "<group>"; };
+		4C7D450E178DA83400219847 /* YMKGeoObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YMKGeoObject.h; sourceTree = "<group>"; };
+		4C7D450F178DA83400219847 /* YMKHostsConfiguration.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YMKHostsConfiguration.h; sourceTree = "<group>"; };
+		4C7D4510178DA83400219847 /* YMKLocationFetcher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YMKLocationFetcher.h; sourceTree = "<group>"; };
+		4C7D4511178DA83400219847 /* YMKMapImageBuilder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YMKMapImageBuilder.h; sourceTree = "<group>"; };
+		4C7D4512178DA83400219847 /* YMKMapLayerInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YMKMapLayerInfo.h; sourceTree = "<group>"; };
+		4C7D4513178DA83400219847 /* YMKMapLayersConfiguration.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YMKMapLayersConfiguration.h; sourceTree = "<group>"; };
+		4C7D4514178DA83400219847 /* YMKMapStructs.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YMKMapStructs.h; sourceTree = "<group>"; };
+		4C7D4515178DA83400219847 /* YMKMapView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YMKMapView.h; sourceTree = "<group>"; };
+		4C7D4516178DA83400219847 /* YMKMapViewDelegate+Protocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "YMKMapViewDelegate+Protocol.h"; sourceTree = "<group>"; };
+		4C7D4517178DA83500219847 /* YMKPinAnnotationView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YMKPinAnnotationView.h; sourceTree = "<group>"; };
+		4C7D4518178DA83500219847 /* YMKRuler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YMKRuler.h; sourceTree = "<group>"; };
+		4C7D4519178DA83500219847 /* YMKTrafficInformer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YMKTrafficInformer.h; sourceTree = "<group>"; };
+		4C7D451A178DA83500219847 /* YMKUserLocation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YMKUserLocation.h; sourceTree = "<group>"; };
+		4C7D451B178DA83500219847 /* YMKVersion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YMKVersion.h; sourceTree = "<group>"; };
+		4C7D451C178DA83500219847 /* libYandexMapKit.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libYandexMapKit.a; sourceTree = "<group>"; };
+		4C7D451D178DA83500219847 /* YandexMapKit.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = YandexMapKit.bundle; sourceTree = "<group>"; };
+		4C7D4520178DA91700219847 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		4C7D4477178DA4C300219847 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4C7D4521178DA91700219847 /* CoreLocation.framework in Frameworks */,
+				4C7D44FF178DA79C00219847 /* SystemConfiguration.framework in Frameworks */,
+				4C7D44FD178DA79700219847 /* Security.framework in Frameworks */,
+				4C7D44FB178DA79100219847 /* QuartzCore.framework in Frameworks */,
+				4C7D44F9178DA78900219847 /* OpenGLES.framework in Frameworks */,
+				4C7D44F7178DA78300219847 /* MessageUI.framework in Frameworks */,
+				4C7D44F5178DA77E00219847 /* libz.dylib in Frameworks */,
+				4C7D44F3178DA77700219847 /* libxml2.dylib in Frameworks */,
+				4C7D44F1178DA77000219847 /* libstdc++.dylib in Frameworks */,
+				4C7D44EF178DA76800219847 /* libsqlite3.dylib in Frameworks */,
+				4C7D44ED178DA76000219847 /* CoreTelephony.framework in Frameworks */,
+				4C7D44EB178DA75700219847 /* CoreData.framework in Frameworks */,
+				4C7D44E9178DA75100219847 /* AVFoundation.framework in Frameworks */,
+				4C7D44E7178DA74C00219847 /* OpenAL.framework in Frameworks */,
+				4C7D44E5178DA74400219847 /* AudioToolbox.framework in Frameworks */,
+				4C7D44C4178DA54000219847 /* libYandexMapKitRoute.a in Frameworks */,
+				4C7D447E178DA4C300219847 /* UIKit.framework in Frameworks */,
+				4C7D4480178DA4C300219847 /* Foundation.framework in Frameworks */,
+				4C7D4482178DA4C300219847 /* CoreGraphics.framework in Frameworks */,
+				4C7D451E178DA83500219847 /* libYandexMapKit.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4C7D449F178DA4C300219847 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4C7D44A5178DA4C300219847 /* SenTestingKit.framework in Frameworks */,
+				4C7D44A6178DA4C300219847 /* UIKit.framework in Frameworks */,
+				4C7D44A7178DA4C300219847 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		4C7D4471178DA4C300219847 = {
+			isa = PBXGroup;
+			children = (
+				4C7D4520178DA91700219847 /* CoreLocation.framework */,
+				4C7D4500178DA83400219847 /* YandexMapKit */,
+				4C7D44FE178DA79C00219847 /* SystemConfiguration.framework */,
+				4C7D44FC178DA79700219847 /* Security.framework */,
+				4C7D44FA178DA79100219847 /* QuartzCore.framework */,
+				4C7D44F8178DA78900219847 /* OpenGLES.framework */,
+				4C7D44F6178DA78300219847 /* MessageUI.framework */,
+				4C7D44F4178DA77E00219847 /* libz.dylib */,
+				4C7D44F2178DA77700219847 /* libxml2.dylib */,
+				4C7D44F0178DA77000219847 /* libstdc++.dylib */,
+				4C7D44EE178DA76800219847 /* libsqlite3.dylib */,
+				4C7D44EC178DA76000219847 /* CoreTelephony.framework */,
+				4C7D44EA178DA75700219847 /* CoreData.framework */,
+				4C7D44E8178DA75100219847 /* AVFoundation.framework */,
+				4C7D44E6178DA74C00219847 /* OpenAL.framework */,
+				4C7D44E4178DA74400219847 /* AudioToolbox.framework */,
+				4C7D44BB178DA53B00219847 /* YandexMapKitRoute.xcodeproj */,
+				4C7D4483178DA4C300219847 /* YandexMapKitRouteExample */,
+				4C7D44AA178DA4C300219847 /* YandexMapKitRouteExampleTests */,
+				4C7D447C178DA4C300219847 /* Frameworks */,
+				4C7D447B178DA4C300219847 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		4C7D447B178DA4C300219847 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				4C7D447A178DA4C300219847 /* YandexMapKitRouteExample.app */,
+				4C7D44A3178DA4C300219847 /* YandexMapKitRouteExampleTests.octest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		4C7D447C178DA4C300219847 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				4C7D447D178DA4C300219847 /* UIKit.framework */,
+				4C7D447F178DA4C300219847 /* Foundation.framework */,
+				4C7D4481178DA4C300219847 /* CoreGraphics.framework */,
+				4C7D44A4178DA4C300219847 /* SenTestingKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		4C7D4483178DA4C300219847 /* YandexMapKitRouteExample */ = {
+			isa = PBXGroup;
+			children = (
+				4C7D448C178DA4C300219847 /* AppDelegate.h */,
+				4C7D448D178DA4C300219847 /* AppDelegate.m */,
+				4C7D4495178DA4C300219847 /* MainStoryboard_iPhone.storyboard */,
+				4C7D449B178DA4C300219847 /* ViewController.h */,
+				4C7D449C178DA4C300219847 /* ViewController.m */,
+				4C7D4484178DA4C300219847 /* Supporting Files */,
+			);
+			path = YandexMapKitRouteExample;
+			sourceTree = "<group>";
+		};
+		4C7D4484178DA4C300219847 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				4C7D4485178DA4C300219847 /* YandexMapKitRouteExample-Info.plist */,
+				4C7D4486178DA4C300219847 /* InfoPlist.strings */,
+				4C7D4489178DA4C300219847 /* main.m */,
+				4C7D448B178DA4C300219847 /* YandexMapKitRouteExample-Prefix.pch */,
+				4C7D448F178DA4C300219847 /* Default.png */,
+				4C7D4491178DA4C300219847 /* Default@2x.png */,
+				4C7D4493178DA4C300219847 /* Default-568h@2x.png */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		4C7D44AA178DA4C300219847 /* YandexMapKitRouteExampleTests */ = {
+			isa = PBXGroup;
+			children = (
+				4C7D44B0178DA4C300219847 /* YandexMapKitRouteExampleTests.h */,
+				4C7D44B1178DA4C300219847 /* YandexMapKitRouteExampleTests.m */,
+				4C7D44AB178DA4C300219847 /* Supporting Files */,
+			);
+			path = YandexMapKitRouteExampleTests;
+			sourceTree = "<group>";
+		};
+		4C7D44AB178DA4C300219847 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				4C7D44AC178DA4C300219847 /* YandexMapKitRouteExampleTests-Info.plist */,
+				4C7D44AD178DA4C300219847 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		4C7D44BC178DA53B00219847 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				4C7D44C1178DA53C00219847 /* libYandexMapKitRoute.a */,
+				4C7D44C3178DA53C00219847 /* YandexMapKitRouteTests.octest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		4C7D4500178DA83400219847 /* YandexMapKit */ = {
+			isa = PBXGroup;
+			children = (
+				4C7D4501178DA83400219847 /* Headers */,
+				4C7D451C178DA83500219847 /* libYandexMapKit.a */,
+				4C7D451D178DA83500219847 /* YandexMapKit.bundle */,
+			);
+			path = YandexMapKit;
+			sourceTree = "<group>";
+		};
+		4C7D4501178DA83400219847 /* Headers */ = {
+			isa = PBXGroup;
+			children = (
+				4C7D4502178DA83400219847 /* NSValue+YMKMapCoordinate.h */,
+				4C7D4503178DA83400219847 /* YandexMapKit.h */,
+				4C7D4504178DA83400219847 /* YMKAnnotation.h */,
+				4C7D4505178DA83400219847 /* YMKAnnotationImage.h */,
+				4C7D4506178DA83400219847 /* YMKAnnotationView.h */,
+				4C7D4507178DA83400219847 /* YMKCalloutContentView-Protocol.h */,
+				4C7D4508178DA83400219847 /* YMKCalloutView.h */,
+				4C7D4509178DA83400219847 /* YMKConfiguration.h */,
+				4C7D450A178DA83400219847 /* YMKConsoleLogging.h */,
+				4C7D450B178DA83400219847 /* YMKDraggableAnnotation.h */,
+				4C7D450C178DA83400219847 /* YMKDraggablePinAnnotationView.h */,
+				4C7D450D178DA83400219847 /* YMKDraggablePinAnnotationViewDelegate+Protocol.h */,
+				4C7D450E178DA83400219847 /* YMKGeoObject.h */,
+				4C7D450F178DA83400219847 /* YMKHostsConfiguration.h */,
+				4C7D4510178DA83400219847 /* YMKLocationFetcher.h */,
+				4C7D4511178DA83400219847 /* YMKMapImageBuilder.h */,
+				4C7D4512178DA83400219847 /* YMKMapLayerInfo.h */,
+				4C7D4513178DA83400219847 /* YMKMapLayersConfiguration.h */,
+				4C7D4514178DA83400219847 /* YMKMapStructs.h */,
+				4C7D4515178DA83400219847 /* YMKMapView.h */,
+				4C7D4516178DA83400219847 /* YMKMapViewDelegate+Protocol.h */,
+				4C7D4517178DA83500219847 /* YMKPinAnnotationView.h */,
+				4C7D4518178DA83500219847 /* YMKRuler.h */,
+				4C7D4519178DA83500219847 /* YMKTrafficInformer.h */,
+				4C7D451A178DA83500219847 /* YMKUserLocation.h */,
+				4C7D451B178DA83500219847 /* YMKVersion.h */,
+			);
+			path = Headers;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		4C7D4479178DA4C300219847 /* YandexMapKitRouteExample */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4C7D44B5178DA4C300219847 /* Build configuration list for PBXNativeTarget "YandexMapKitRouteExample" */;
+			buildPhases = (
+				4C7D4476178DA4C300219847 /* Sources */,
+				4C7D4477178DA4C300219847 /* Frameworks */,
+				4C7D4478178DA4C300219847 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = YandexMapKitRouteExample;
+			productName = YandexMapKitRouteExample;
+			productReference = 4C7D447A178DA4C300219847 /* YandexMapKitRouteExample.app */;
+			productType = "com.apple.product-type.application";
+		};
+		4C7D44A2178DA4C300219847 /* YandexMapKitRouteExampleTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4C7D44B8178DA4C300219847 /* Build configuration list for PBXNativeTarget "YandexMapKitRouteExampleTests" */;
+			buildPhases = (
+				4C7D449E178DA4C300219847 /* Sources */,
+				4C7D449F178DA4C300219847 /* Frameworks */,
+				4C7D44A0178DA4C300219847 /* Resources */,
+				4C7D44A1178DA4C300219847 /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				4C7D44A9178DA4C300219847 /* PBXTargetDependency */,
+			);
+			name = YandexMapKitRouteExampleTests;
+			productName = YandexMapKitRouteExampleTests;
+			productReference = 4C7D44A3178DA4C300219847 /* YandexMapKitRouteExampleTests.octest */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		4C7D4472178DA4C300219847 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0460;
+				ORGANIZATIONNAME = eantropov;
+			};
+			buildConfigurationList = 4C7D4475178DA4C300219847 /* Build configuration list for PBXProject "YandexMapKitRouteExample" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 4C7D4471178DA4C300219847;
+			productRefGroup = 4C7D447B178DA4C300219847 /* Products */;
+			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 4C7D44BC178DA53B00219847 /* Products */;
+					ProjectRef = 4C7D44BB178DA53B00219847 /* YandexMapKitRoute.xcodeproj */;
+				},
+			);
+			projectRoot = "";
+			targets = (
+				4C7D4479178DA4C300219847 /* YandexMapKitRouteExample */,
+				4C7D44A2178DA4C300219847 /* YandexMapKitRouteExampleTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		4C7D44C1178DA53C00219847 /* libYandexMapKitRoute.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libYandexMapKitRoute.a;
+			remoteRef = 4C7D44C0178DA53C00219847 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		4C7D44C3178DA53C00219847 /* YandexMapKitRouteTests.octest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = YandexMapKitRouteTests.octest;
+			remoteRef = 4C7D44C2178DA53C00219847 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
+
+/* Begin PBXResourcesBuildPhase section */
+		4C7D4478178DA4C300219847 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4C7D4488178DA4C300219847 /* InfoPlist.strings in Resources */,
+				4C7D4490178DA4C300219847 /* Default.png in Resources */,
+				4C7D4492178DA4C300219847 /* Default@2x.png in Resources */,
+				4C7D4494178DA4C300219847 /* Default-568h@2x.png in Resources */,
+				4C7D4497178DA4C300219847 /* MainStoryboard_iPhone.storyboard in Resources */,
+				4C7D451F178DA83500219847 /* YandexMapKit.bundle in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4C7D44A0178DA4C300219847 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4C7D44AF178DA4C300219847 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		4C7D44A1178DA4C300219847 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		4C7D4476178DA4C300219847 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4C7D448A178DA4C300219847 /* main.m in Sources */,
+				4C7D448E178DA4C300219847 /* AppDelegate.m in Sources */,
+				4C7D449D178DA4C300219847 /* ViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4C7D449E178DA4C300219847 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4C7D44B2178DA4C300219847 /* YandexMapKitRouteExampleTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		4C7D44A9178DA4C300219847 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 4C7D4479178DA4C300219847 /* YandexMapKitRouteExample */;
+			targetProxy = 4C7D44A8178DA4C300219847 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		4C7D4486178DA4C300219847 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4C7D4487178DA4C300219847 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		4C7D4495178DA4C300219847 /* MainStoryboard_iPhone.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4C7D4496178DA4C300219847 /* en */,
+			);
+			name = MainStoryboard_iPhone.storyboard;
+			sourceTree = "<group>";
+		};
+		4C7D44AD178DA4C300219847 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4C7D44AE178DA4C300219847 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		4C7D44B3178DA4C300219847 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		4C7D44B4178DA4C300219847 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		4C7D44B6178DA4C300219847 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "YandexMapKitRouteExample/YandexMapKitRouteExample-Prefix.pch";
+				INFOPLIST_FILE = "YandexMapKitRouteExample/YandexMapKitRouteExample-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/../../../YandexMapKit\"",
+					"\"$(SRCROOT)/YandexMapKit\"",
+				);
+				OTHER_LDFLAGS = "-all_load";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		4C7D44B7178DA4C300219847 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "YandexMapKitRouteExample/YandexMapKitRouteExample-Prefix.pch";
+				INFOPLIST_FILE = "YandexMapKitRouteExample/YandexMapKitRouteExample-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/../../../YandexMapKit\"",
+					"\"$(SRCROOT)/YandexMapKit\"",
+				);
+				OTHER_LDFLAGS = "-all_load";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		4C7D44B9178DA4C300219847 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/YandexMapKitRouteExample.app/YandexMapKitRouteExample";
+				FRAMEWORK_SEARCH_PATHS = (
+					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
+					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "YandexMapKitRouteExample/YandexMapKitRouteExample-Prefix.pch";
+				INFOPLIST_FILE = "YandexMapKitRouteExampleTests/YandexMapKitRouteExampleTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Debug;
+		};
+		4C7D44BA178DA4C300219847 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/YandexMapKitRouteExample.app/YandexMapKitRouteExample";
+				FRAMEWORK_SEARCH_PATHS = (
+					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
+					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "YandexMapKitRouteExample/YandexMapKitRouteExample-Prefix.pch";
+				INFOPLIST_FILE = "YandexMapKitRouteExampleTests/YandexMapKitRouteExampleTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		4C7D4475178DA4C300219847 /* Build configuration list for PBXProject "YandexMapKitRouteExample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4C7D44B3178DA4C300219847 /* Debug */,
+				4C7D44B4178DA4C300219847 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4C7D44B5178DA4C300219847 /* Build configuration list for PBXNativeTarget "YandexMapKitRouteExample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4C7D44B6178DA4C300219847 /* Debug */,
+				4C7D44B7178DA4C300219847 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4C7D44B8178DA4C300219847 /* Build configuration list for PBXNativeTarget "YandexMapKitRouteExampleTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4C7D44B9178DA4C300219847 /* Debug */,
+				4C7D44BA178DA4C300219847 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 4C7D4472178DA4C300219847 /* Project object */;
+}
