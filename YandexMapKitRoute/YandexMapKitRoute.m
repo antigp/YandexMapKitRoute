@@ -44,20 +44,21 @@
 + (YandexMapKitRoute *) showRouteOnMap:(YMKMapView *)mapView From:(YMKMapCoordinate) coordinateFrom To: (YMKMapCoordinate) coordinateTo{
     YandexMapKitRoute* returnRoute;
     @try {
-        //Check if already have routeView
-        if([[((UIScrollView<UIScrollViewDelegate> *) [mapView.subviews objectAtIndex:1]).subviews objectAtIndex:1] isKindOfClass:[YandexMapKitRoute class]]){
-            //Update existen
-            returnRoute=[((UIScrollView<UIScrollViewDelegate> *) [mapView.subviews objectAtIndex:1]).subviews objectAtIndex:1];
+        for (UIView * view in ((UIScrollView<UIScrollViewDelegate> *) [mapView.subviews objectAtIndex:1]).subviews) {
+            if([view isKindOfClass:[YandexMapKitRoute class]]){
+                returnRoute=(YandexMapKitRoute *)view;
+            }
         }
-        else{
+
+        if(returnRoute==nil){
             //Create new View
             returnRoute = [[YandexMapKitRoute alloc] initWithFrame:(CGRect){0,0,mapView.frame.size}];
             //Get UIScrollView
             returnRoute.YXScrollView = (UIScrollView<UIScrollViewDelegate> *) [mapView.subviews objectAtIndex:1];
             //Insert RouteView
-            [returnRoute.YXScrollView insertSubview:returnRoute atIndex:1];
+            [returnRoute.YXScrollView addSubview:returnRoute];
             returnRoute.YMKMapViewInternal = mapView;
-            
+
             //Set proxy delegate to handle events
             YandexMapKitRouteDelegate * delegate=[[YandexMapKitRouteDelegate alloc] init];
             if(mapView.delegate!=nil)
@@ -65,27 +66,27 @@
             delegate.mapView=mapView;
             mapView.delegate=nil;
             mapView.delegate=delegate;
-            
+
             //Setting properties of Route view
             [returnRoute setBackgroundColor:[UIColor clearColor]];
             [returnRoute setUserInteractionEnabled:NO];
-            
+
             delegate.route=returnRoute;
             returnRoute.delegate= delegate;
         }
-        
+
         NSString * routeString=[YandexMapKitRoute getRouteStringFrom:coordinateFrom To:coordinateTo];
         if(routeString==nil)
             return nil;
         returnRoute.geoPointArray = [YandexMapKitRoute parseData:[YandexBase64 decode:routeString]];
-        
-        
-        
+
+
+
         CGRect frame=returnRoute.frame;
         frame.origin=returnRoute.YXScrollView.contentOffset;
         returnRoute.frame=frame;
         [returnRoute setNeedsDisplay];
-        
+
     }
     @catch (NSException *exception) {
         NSLog(@"Can't show route");
