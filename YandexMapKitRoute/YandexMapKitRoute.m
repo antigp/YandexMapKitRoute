@@ -94,37 +94,31 @@
         return returnRoute;
     }
 }
+
 - (void) drawRect:(CGRect)rect{
-    //Get values of zoom
-    float zoomScale = [(fakeYMKMapView *)self.YMKMapViewInternal zoomScale];
-    float metersInPixel = ((fakeYMKMapView *)self.YMKMapViewInternal).metersInPixel;
-    
-    //Magic constat numbers need to convert lat and long to pixel by zoom level
-    float constantY=2913*1.775*2*(10.76/(metersInPixel / zoomScale));
-    float constantX=2913*2*(10.76/(metersInPixel / zoomScale));
-    
-    //Lat and long of zero point rect
-    float  minY=self.YMKMapViewInternal.region.center.latitude+(self.YMKMapViewInternal.region.span.latitudeDelta/2);
-    float  minX=self.YMKMapViewInternal.region.center.longitude-(self.YMKMapViewInternal.region.span.longitudeDelta/2);
-    
+
+    int z = [self.YMKMapViewInternal zoomLevel];
     //Setting CGContext
     CGContextRef context = UIGraphicsGetCurrentContext();
-    CGContextTranslateCTM(context, 0, 0);
-    CGContextScaleCTM(context, 1.0, -1.0);
+
     //Width of route line
-    CGContextSetLineWidth(context, 5.0);
+    CGContextSetLineWidth(context, z/2);
+
     //Color of route line
     CGContextSetStrokeColorWithColor(context, [UIColor colorWithRed:0 green:0 blue:1 alpha:0.5].CGColor);
-    
+
     //Move to first position of route
-    CGContextMoveToPoint(context, ([[[_geoPointArray objectAtIndex:0] objectForKey:@"X"] floatValue]-minX)*constantX , ([[[_geoPointArray objectAtIndex:0] objectForKey:@"Y"] floatValue]-minY)*constantY);
+    CGPoint startPoint=[self.YMKMapViewInternal convertLLToMapView:YMKMapCoordinateMake([[[_geoPointArray objectAtIndex:0] objectForKey:@"Y"] floatValue],[[[_geoPointArray objectAtIndex:0] objectForKey:@"X"] floatValue])];
+    CGContextMoveToPoint(context, startPoint.x,startPoint.y);
+
     for (NSDictionary * position in _geoPointArray) {
+        CGPoint point=[self.YMKMapViewInternal convertLLToMapView:YMKMapCoordinateMake([[position objectForKey:@"Y"] floatValue],[[position objectForKey:@"X"] floatValue])];
         //Draw route
-        CGContextAddLineToPoint(context, ([[position objectForKey:@"X"] floatValue]-minX)*constantX,([[position objectForKey:@"Y"] floatValue]-minY)*constantY);
+        CGContextAddLineToPoint(context, point.x,point.y);
     }
-    
+
     CGContextStrokePath(context);
-    
+
 }
 
 //Function to convert Yandex dif coordinate to absoulute lat long coordinate
