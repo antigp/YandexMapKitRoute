@@ -7,7 +7,7 @@
 //
 
 #import "YandexMapKitRouteDelegate.h"
-#import "YandexMapKit.h"
+#import <YandexMapKit/YandexMapKit.h>
 #import "YandexMapKitRoute.h"
 
 @implementation YandexMapKitRouteDelegate

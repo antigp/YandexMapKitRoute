@@ -7,7 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "YandexMapKit.h"
+#import "YandexMapKit/YandexMapKit.h"
 
 
 @interface fakeYMKMapView: YMKMapView{

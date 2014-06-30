@@ -38,8 +38,6 @@
 		4C7D44FB178DA79100219847 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C7D44FA178DA79100219847 /* QuartzCore.framework */; };
 		4C7D44FD178DA79700219847 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C7D44FC178DA79700219847 /* Security.framework */; };
 		4C7D44FF178DA79C00219847 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C7D44FE178DA79C00219847 /* SystemConfiguration.framework */; };
-		4C7D451E178DA83500219847 /* libYandexMapKit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C7D451C178DA83500219847 /* libYandexMapKit.a */; };
-		4C7D451F178DA83500219847 /* YandexMapKit.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 4C7D451D178DA83500219847 /* YandexMapKit.bundle */; };
 		4C7D4521178DA91700219847 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C7D4520178DA91700219847 /* CoreLocation.framework */; };
 /* End PBXBuildFile section */
 
@@ -68,6 +66,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1E98E1989028461FB2A57A6F /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
 		4C7D447A178DA4C300219847 /* YandexMapKitRouteExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YandexMapKitRouteExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4C7D447D178DA4C300219847 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		4C7D447F178DA4C300219847 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -105,35 +104,8 @@
 		4C7D44FA178DA79100219847 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		4C7D44FC178DA79700219847 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		4C7D44FE178DA79C00219847 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
-		4C7D4502178DA83400219847 /* NSValue+YMKMapCoordinate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSValue+YMKMapCoordinate.h"; sourceTree = "<group>"; };
-		4C7D4503178DA83400219847 /* YandexMapKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YandexMapKit.h; sourceTree = "<group>"; };
-		4C7D4504178DA83400219847 /* YMKAnnotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YMKAnnotation.h; sourceTree = "<group>"; };
-		4C7D4505178DA83400219847 /* YMKAnnotationImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YMKAnnotationImage.h; sourceTree = "<group>"; };
-		4C7D4506178DA83400219847 /* YMKAnnotationView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YMKAnnotationView.h; sourceTree = "<group>"; };
-		4C7D4507178DA83400219847 /* YMKCalloutContentView-Protocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "YMKCalloutContentView-Protocol.h"; sourceTree = "<group>"; };
-		4C7D4508178DA83400219847 /* YMKCalloutView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YMKCalloutView.h; sourceTree = "<group>"; };
-		4C7D4509178DA83400219847 /* YMKConfiguration.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YMKConfiguration.h; sourceTree = "<group>"; };
-		4C7D450A178DA83400219847 /* YMKConsoleLogging.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YMKConsoleLogging.h; sourceTree = "<group>"; };
-		4C7D450B178DA83400219847 /* YMKDraggableAnnotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YMKDraggableAnnotation.h; sourceTree = "<group>"; };
-		4C7D450C178DA83400219847 /* YMKDraggablePinAnnotationView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YMKDraggablePinAnnotationView.h; sourceTree = "<group>"; };
-		4C7D450D178DA83400219847 /* YMKDraggablePinAnnotationViewDelegate+Protocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "YMKDraggablePinAnnotationViewDelegate+Protocol.h"; sourceTree = "<group>"; };
-		4C7D450E178DA83400219847 /* YMKGeoObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YMKGeoObject.h; sourceTree = "<group>"; };
-		4C7D450F178DA83400219847 /* YMKHostsConfiguration.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YMKHostsConfiguration.h; sourceTree = "<group>"; };
-		4C7D4510178DA83400219847 /* YMKLocationFetcher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YMKLocationFetcher.h; sourceTree = "<group>"; };
-		4C7D4511178DA83400219847 /* YMKMapImageBuilder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YMKMapImageBuilder.h; sourceTree = "<group>"; };
-		4C7D4512178DA83400219847 /* YMKMapLayerInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YMKMapLayerInfo.h; sourceTree = "<group>"; };
-		4C7D4513178DA83400219847 /* YMKMapLayersConfiguration.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YMKMapLayersConfiguration.h; sourceTree = "<group>"; };
-		4C7D4514178DA83400219847 /* YMKMapStructs.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YMKMapStructs.h; sourceTree = "<group>"; };
-		4C7D4515178DA83400219847 /* YMKMapView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YMKMapView.h; sourceTree = "<group>"; };
-		4C7D4516178DA83400219847 /* YMKMapViewDelegate+Protocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "YMKMapViewDelegate+Protocol.h"; sourceTree = "<group>"; };
-		4C7D4517178DA83500219847 /* YMKPinAnnotationView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YMKPinAnnotationView.h; sourceTree = "<group>"; };
-		4C7D4518178DA83500219847 /* YMKRuler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YMKRuler.h; sourceTree = "<group>"; };
-		4C7D4519178DA83500219847 /* YMKTrafficInformer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YMKTrafficInformer.h; sourceTree = "<group>"; };
-		4C7D451A178DA83500219847 /* YMKUserLocation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YMKUserLocation.h; sourceTree = "<group>"; };
-		4C7D451B178DA83500219847 /* YMKVersion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YMKVersion.h; sourceTree = "<group>"; };
-		4C7D451C178DA83500219847 /* libYandexMapKit.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libYandexMapKit.a; sourceTree = "<group>"; };
-		4C7D451D178DA83500219847 /* YandexMapKit.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = YandexMapKit.bundle; sourceTree = "<group>"; };
 		4C7D4520178DA91700219847 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		D4464BBF6AA04A8B957B4DDA /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -160,7 +132,6 @@
 				4C7D447E178DA4C300219847 /* UIKit.framework in Frameworks */,
 				4C7D4480178DA4C300219847 /* Foundation.framework in Frameworks */,
 				4C7D4482178DA4C300219847 /* CoreGraphics.framework in Frameworks */,
-				4C7D451E178DA83500219847 /* libYandexMapKit.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -181,7 +152,6 @@
 			isa = PBXGroup;
 			children = (
 				4C7D4520178DA91700219847 /* CoreLocation.framework */,
-				4C7D4500178DA83400219847 /* YandexMapKit */,
 				4C7D44FE178DA79C00219847 /* SystemConfiguration.framework */,
 				4C7D44FC178DA79700219847 /* Security.framework */,
 				4C7D44FA178DA79100219847 /* QuartzCore.framework */,
@@ -201,6 +171,7 @@
 				4C7D44AA178DA4C300219847 /* YandexMapKitRouteExampleTests */,
 				4C7D447C178DA4C300219847 /* Frameworks */,
 				4C7D447B178DA4C300219847 /* Products */,
+				1E98E1989028461FB2A57A6F /* Pods.xcconfig */,
 			);
 			sourceTree = "<group>";
 		};
@@ -220,6 +191,7 @@
 				4C7D447F178DA4C300219847 /* Foundation.framework */,
 				4C7D4481178DA4C300219847 /* CoreGraphics.framework */,
 				4C7D44A4178DA4C300219847 /* SenTestingKit.framework */,
+				D4464BBF6AA04A8B957B4DDA /* libPods.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -279,49 +251,6 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		4C7D4500178DA83400219847 /* YandexMapKit */ = {
-			isa = PBXGroup;
-			children = (
-				4C7D4501178DA83400219847 /* Headers */,
-				4C7D451C178DA83500219847 /* libYandexMapKit.a */,
-				4C7D451D178DA83500219847 /* YandexMapKit.bundle */,
-			);
-			path = YandexMapKit;
-			sourceTree = "<group>";
-		};
-		4C7D4501178DA83400219847 /* Headers */ = {
-			isa = PBXGroup;
-			children = (
-				4C7D4502178DA83400219847 /* NSValue+YMKMapCoordinate.h */,
-				4C7D4503178DA83400219847 /* YandexMapKit.h */,
-				4C7D4504178DA83400219847 /* YMKAnnotation.h */,
-				4C7D4505178DA83400219847 /* YMKAnnotationImage.h */,
-				4C7D4506178DA83400219847 /* YMKAnnotationView.h */,
-				4C7D4507178DA83400219847 /* YMKCalloutContentView-Protocol.h */,
-				4C7D4508178DA83400219847 /* YMKCalloutView.h */,
-				4C7D4509178DA83400219847 /* YMKConfiguration.h */,
-				4C7D450A178DA83400219847 /* YMKConsoleLogging.h */,
-				4C7D450B178DA83400219847 /* YMKDraggableAnnotation.h */,
-				4C7D450C178DA83400219847 /* YMKDraggablePinAnnotationView.h */,
-				4C7D450D178DA83400219847 /* YMKDraggablePinAnnotationViewDelegate+Protocol.h */,
-				4C7D450E178DA83400219847 /* YMKGeoObject.h */,
-				4C7D450F178DA83400219847 /* YMKHostsConfiguration.h */,
-				4C7D4510178DA83400219847 /* YMKLocationFetcher.h */,
-				4C7D4511178DA83400219847 /* YMKMapImageBuilder.h */,
-				4C7D4512178DA83400219847 /* YMKMapLayerInfo.h */,
-				4C7D4513178DA83400219847 /* YMKMapLayersConfiguration.h */,
-				4C7D4514178DA83400219847 /* YMKMapStructs.h */,
-				4C7D4515178DA83400219847 /* YMKMapView.h */,
-				4C7D4516178DA83400219847 /* YMKMapViewDelegate+Protocol.h */,
-				4C7D4517178DA83500219847 /* YMKPinAnnotationView.h */,
-				4C7D4518178DA83500219847 /* YMKRuler.h */,
-				4C7D4519178DA83500219847 /* YMKTrafficInformer.h */,
-				4C7D451A178DA83500219847 /* YMKUserLocation.h */,
-				4C7D451B178DA83500219847 /* YMKVersion.h */,
-			);
-			path = Headers;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -329,9 +258,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 4C7D44B5178DA4C300219847 /* Build configuration list for PBXNativeTarget "YandexMapKitRouteExample" */;
 			buildPhases = (
+				E8D00EEDBF3A499CA49CCF70 /* Check Pods Manifest.lock */,
 				4C7D4476178DA4C300219847 /* Sources */,
 				4C7D4477178DA4C300219847 /* Frameworks */,
 				4C7D4478178DA4C300219847 /* Resources */,
+				90A257E8EAED4E03B9103451 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -367,7 +298,7 @@
 		4C7D4472178DA4C300219847 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0460;
+				LastUpgradeCheck = 0510;
 				ORGANIZATIONNAME = eantropov;
 			};
 			buildConfigurationList = 4C7D4475178DA4C300219847 /* Build configuration list for PBXProject "YandexMapKitRouteExample" */;
@@ -421,7 +352,6 @@
 				4C7D4492178DA4C300219847 /* Default@2x.png in Resources */,
 				4C7D4494178DA4C300219847 /* Default-568h@2x.png in Resources */,
 				4C7D4497178DA4C300219847 /* MainStoryboard_iPhone.storyboard in Resources */,
-				4C7D451F178DA83500219847 /* YandexMapKit.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -448,6 +378,36 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
+		90A257E8EAED4E03B9103451 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E8D00EEDBF3A499CA49CCF70 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -568,17 +528,16 @@
 		};
 		4C7D44B6178DA4C300219847 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1E98E1989028461FB2A57A6F /* Pods.xcconfig */;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "YandexMapKitRouteExample/YandexMapKitRouteExample-Prefix.pch";
 				INFOPLIST_FILE = "YandexMapKitRouteExample/YandexMapKitRouteExample-Info.plist";
-				LIBRARY_SEARCH_PATHS = (
+				LIBRARY_SEARCH_PATHS = "$(inherited)";
+				OTHER_LDFLAGS = (
+					"-all_load",
 					"$(inherited)",
-					"\"$(SRCROOT)/../../../YandexMapKit\"",
-					"\"$(SRCROOT)/YandexMapKit\"",
 				);
-				OTHER_LDFLAGS = "-all_load";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
@@ -587,17 +546,16 @@
 		};
 		4C7D44B7178DA4C300219847 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1E98E1989028461FB2A57A6F /* Pods.xcconfig */;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "YandexMapKitRouteExample/YandexMapKitRouteExample-Prefix.pch";
 				INFOPLIST_FILE = "YandexMapKitRouteExample/YandexMapKitRouteExample-Info.plist";
-				LIBRARY_SEARCH_PATHS = (
+				LIBRARY_SEARCH_PATHS = "$(inherited)";
+				OTHER_LDFLAGS = (
+					"-all_load",
 					"$(inherited)",
-					"\"$(SRCROOT)/../../../YandexMapKit\"",
-					"\"$(SRCROOT)/YandexMapKit\"",
 				);
-				OTHER_LDFLAGS = "-all_load";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
