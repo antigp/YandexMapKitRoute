@@ -57,7 +57,7 @@
             //Get UIScrollView
             returnRoute.YXScrollView = (UIScrollView<UIScrollViewDelegate> *) [mapView.subviews objectAtIndex:1];
             //Insert RouteView
-            [returnRoute.YXScrollView addSubview:returnRoute];
+            [returnRoute.YXScrollView insertSubview:returnRoute atIndex:1];
             returnRoute.YMKMapViewInternal = mapView;
             
             //Set proxy delegate to handle events
