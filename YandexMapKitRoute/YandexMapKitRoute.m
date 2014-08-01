@@ -18,7 +18,7 @@
 + (NSString *) getRouteStringFrom:(YMKMapCoordinate)from To:(YMKMapCoordinate)to{
     NSString * returnString;
     //Address to request route
-    NSString* urlString = [NSString stringWithFormat:@"http://maps.yandex.ru/services/router/search/2.x/search.json?lang=ru-RU&origin=maps-router-label&simplify=1&rll=%f,%f~%f,%f&rtm=atm&search_type=geo",from.latitude,from.longitude,to.latitude,to.longitude];
+    NSString* urlString = [NSString stringWithFormat:@"DELETED_YANDEX_URL",from.latitude,from.longitude,to.latitude,to.longitude];
     NSURL * yandexUrl=[NSURL URLWithString:urlString];
     NSMutableURLRequest *request = [[NSMutableURLRequest alloc] init];
     [request setURL:yandexUrl];
