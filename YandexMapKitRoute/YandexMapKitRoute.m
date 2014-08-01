@@ -16,9 +16,10 @@
 @synthesize YMKMapViewInternal,YXScrollView,delegate;
 
 + (NSString *) getRouteStringFrom:(YMKMapCoordinate)from To:(YMKMapCoordinate)to{
-   NSString * returnString;
+    NSString * returnString;
     //Address to request route
-   NSURL * yandexUrl=[NSURL URLWithString:[NSString stringWithFormat:@"YANDEX_DELETED_MAPKIT_V1_URL",from.longitude,from.latitude,to.longitude,to.latitude]];
+    NSString* urlString = [NSString stringWithFormat:@"http://maps.yandex.ru/services/router/search/2.x/search.json?lang=ru-RU&origin=maps-router-label&simplify=1&rll=%f,%f~%f,%f&rtm=atm&search_type=geo",from.latitude,from.longitude,to.latitude,to.longitude];
+    NSURL * yandexUrl=[NSURL URLWithString:urlString];
     NSMutableURLRequest *request = [[NSMutableURLRequest alloc] init];
     [request setURL:yandexUrl];
     NSURLResponse* response;
@@ -29,14 +30,14 @@
     if(result!=nil){
         //NSJSONSerialization reolization
         NSDictionary * json = [NSJSONSerialization JSONObjectWithData:result options:0 error:nil];
-        returnString=json[@"features"][0][@"features"][1][@"properties"][@"polylod"][@"polyline"];
+        returnString=json[@"data"][@"features"][0][@"features"][0][@"properties"][@"encodedCoordinates"];
         //\NSJSONSerialization reolization
         
         //USE this for ios < 5 support
-            //SBJson reolization
-            //NSDictionary * returnDict=[[[NSString alloc] initWithData:result encoding:NSUTF8StringEncoding] JSONValue];
-            //returnString=[[[returnDict valueForKey:@"stages"] valueForKey:@"encodedPoints"] objectAtIndex:0];
-            //\SBJson reolization
+        //SBJson reolization
+        //NSDictionary * returnDict=[[[NSString alloc] initWithData:result encoding:NSUTF8StringEncoding] JSONValue];
+        //returnString=[[[returnDict valueForKey:@"stages"] valueForKey:@"encodedPoints"] objectAtIndex:0];
+        //\SBJson reolization
     }
     return returnString;
 }
@@ -49,7 +50,7 @@
                 returnRoute=(YandexMapKitRoute *)view;
             }
         }
-
+        
         if(returnRoute==nil){
             //Create new View
             returnRoute = [[YandexMapKitRoute alloc] initWithFrame:(CGRect){0,0,mapView.frame.size}];
@@ -58,7 +59,7 @@
             //Insert RouteView
             [returnRoute.YXScrollView addSubview:returnRoute];
             returnRoute.YMKMapViewInternal = mapView;
-
+            
             //Set proxy delegate to handle events
             YandexMapKitRouteDelegate * delegate=[[YandexMapKitRouteDelegate alloc] init];
             if(mapView.delegate!=nil)
@@ -66,27 +67,27 @@
             delegate.mapView=mapView;
             mapView.delegate=nil;
             mapView.delegate=delegate;
-
+            
             //Setting properties of Route view
             [returnRoute setBackgroundColor:[UIColor clearColor]];
             [returnRoute setUserInteractionEnabled:NO];
-
+            
             delegate.route=returnRoute;
             returnRoute.delegate= delegate;
         }
-
+        
         NSString * routeString=[YandexMapKitRoute getRouteStringFrom:coordinateFrom To:coordinateTo];
         if(routeString==nil)
             return nil;
         returnRoute.geoPointArray = [YandexMapKitRoute parseData:[YandexBase64 decode:routeString]];
-
-
-
+        
+        
+        
         CGRect frame=returnRoute.frame;
         frame.origin=returnRoute.YXScrollView.contentOffset;
         returnRoute.frame=frame;
         [returnRoute setNeedsDisplay];
-
+        
     }
     @catch (NSException *exception) {
         NSLog(@"Can't show route");
@@ -97,29 +98,29 @@
 }
 
 - (void) drawRect:(CGRect)rect{
-
+    
     int z = [self.YMKMapViewInternal zoomLevel];
     //Setting CGContext
     CGContextRef context = UIGraphicsGetCurrentContext();
-
+    
     //Width of route line
     CGContextSetLineWidth(context, z/2);
-
+    
     //Color of route line
     CGContextSetStrokeColorWithColor(context, [UIColor colorWithRed:0 green:0 blue:1 alpha:0.5].CGColor);
-
+    
     //Move to first position of route
     CGPoint startPoint=[self.YMKMapViewInternal convertLLToMapView:YMKMapCoordinateMake([[[_geoPointArray objectAtIndex:0] objectForKey:@"Y"] floatValue],[[[_geoPointArray objectAtIndex:0] objectForKey:@"X"] floatValue])];
     CGContextMoveToPoint(context, startPoint.x,startPoint.y);
-
+    
     for (NSDictionary * position in _geoPointArray) {
         CGPoint point=[self.YMKMapViewInternal convertLLToMapView:YMKMapCoordinateMake([[position objectForKey:@"Y"] floatValue],[[position objectForKey:@"X"] floatValue])];
         //Draw route
         CGContextAddLineToPoint(context, point.x,point.y);
     }
-
+    
     CGContextStrokePath(context);
-
+    
 }
 
 //Function to convert Yandex dif coordinate to absoulute lat long coordinate
