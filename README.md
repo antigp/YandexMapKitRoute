@@ -8,7 +8,7 @@ Installation:
     5) In project YandexMapKitRouteExample of workspace delete libPods.a from "Linked frameworks and Libraries" (It's already linked in YandexMapKitRoute project from this workspace)
     
 
-For more information about "YANDEX_DELETED_MAPKIT_V1_URL" and how get it please read: https://github.com/antigp/YandexMapKitRoute/issues/5
+For more information about "DELETE_YANDEX_URL" and how get it please read: https://github.com/antigp/YandexMapKitRoute/issues/5
 
 USAGE
 
